@@ -15,10 +15,8 @@ function validarEmail(valor) {
     emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}.){1,125}[A-Z]{2,63}$/i;
     //Se muestra un texto a modo de ejemplo, luego va a ser un icono
     if (emailRegex.test(valor)) {
-        alert("correo válido")
       return true;
     } else {
-        alert("Correo inválido")
       return false;
     }
 } 
@@ -29,12 +27,10 @@ function registrar(obj){
         data: obj,
         dataType: "json",
         success: function(response) {
-            alert(response);
-            console.log(response);
+            console.log(JSON.stringify(response));
         },
         error: function(response){
-            alert(response);
-            console.log(response)
+            console.log(JSON.stringify(response))
         }
     }); 
 
