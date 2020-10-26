@@ -1,6 +1,3 @@
-var direccion="/cgi-bin/FruverHouseBack";
-
-
 $("#btnRegistrar").click(function(e){
     e.preventDefault();
     var primerNombre=$("#n1").val();
