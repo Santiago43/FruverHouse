@@ -3,7 +3,9 @@ function validarEmail(valor) {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(valor)){
      return true;
     } 
-    return false;
+    else{
+        return false;
+    }
 } 
 function registrar(obj){
     $.ajax({
