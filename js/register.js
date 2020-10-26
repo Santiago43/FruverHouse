@@ -1,26 +1,6 @@
 var direccion="/cgi-bin/FruverHouseBack";
 
-function registrar(obj){
-    $.ajax({
-        method: 'POST',
-        url: direccion+'/register.py',
-        data: obj,
-        dataType: "json",
-        success: function(response) {
-            if(response.tipo==="OK"){
-                alert("Mensaje: "+response.mensaje)
-                $(location).attr('href','/FruverHouse/index.html')
-            }
-            else{
-                alert("Error: "+response.mensaje)
-            }
-        },
-        error: function(response){
-            console.log(JSON.stringify(response))
-        }
-    }); 
 
-}
 $("#btnRegistrar").click(function(e){
     e.preventDefault();
     var primerNombre=$("#n1").val();
@@ -57,7 +37,7 @@ $("#btnRegistrar").click(function(e){
                         direccion: direccion,
                         cedula: cedula
                     };
-                    registrar(obj);
+                    registrarUsuario(obj);
                 }
             }
         } 
