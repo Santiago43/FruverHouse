@@ -1,16 +1,5 @@
 var direccion="/cgi-bin/FruverHouseBack";
-/*document.getElementById('email').addEventListener('input', function() {
-    campo = event.target;
-    valido = document.getElementById('emailOK');
 
-    emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}.){1,125}[A-Z]{2,63}$/i;
-    //Se muestra un texto a modo de ejemplo, luego va a ser un icono
-    if (emailRegex.test(campo.value)) {
-      valido.innerText = "válido";
-    } else {
-      valido.innerText = "incorrecto";
-    }
-});*/
 function validarEmail(valor) {
     emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}.){1,125}[A-Z]{2,63}$/i;
     //Se muestra un texto a modo de ejemplo, luego va a ser un icono
@@ -27,7 +16,13 @@ function registrar(obj){
         data: obj,
         dataType: "json",
         success: function(response) {
-            console.log(JSON.stringify(response));
+            if(response.tipo==="OK"){
+                alert("Mensaje: "+response.mensaje)
+                $(location).attr('href','/FruverHouse/index.html')
+            }
+            else{
+                alert("Error: "+response.mensaje)
+            }
         },
         error: function(response){
             console.log(JSON.stringify(response))
@@ -47,7 +42,7 @@ $("#btnRegistrar").click(function(e){
     var passwordC=$("#passc").val();
     var telefono=$("#telefono").val();
     var direccion=$("#direccion").val();
-    var check=$("#check1").val();
+    var check=$("#check1").prop("checked");
     var cedula=$("#cedula").val();
     if (validarEmail(email)){
         if(email!==emailc){
