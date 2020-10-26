@@ -1,4 +1,4 @@
-var direccion="/cgi-bin/FruverHouseBack/";
+var direccion="/cgi-bin/FruverHouseBack";
 /*document.getElementById('email').addEventListener('input', function() {
     campo = event.target;
     valido = document.getElementById('emailOK');
