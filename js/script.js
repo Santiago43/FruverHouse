@@ -62,6 +62,7 @@ function consultarCategorias(){
         url: direccion+'/inicio.py',
         dataType: "json",
         success: function(response) {
+            console.log("imprimo aquí")
             console.log(response)
         },
         error: function(response){
