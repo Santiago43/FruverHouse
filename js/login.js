@@ -4,8 +4,8 @@ $("#Ingresar").click(function(e){
     var pass=$("#pass").val();
     if(validarEmail(email)){
         var obj={
-            email:email,
-            contra:pass
+            email: email,
+            contra: pass
         };
         loginUsuario(obj)
     }else{
