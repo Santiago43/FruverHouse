@@ -34,3 +34,39 @@ function registrarUsuario(obj){
     }); 
 
 }
+
+function loginUsuario(obj){
+    $.ajax({
+        method: 'POST',
+        url: direccion+'/login.py',
+        data: obj,
+        dataType: "json",
+        success: function(response) {
+            if(response.tipo==="OK"){
+                alert("Mensaje: "+response.mensaje)
+                $(location).attr('href','/FruverHouse/main.html')
+            }
+            else{
+                alert("Error: "+response.mensaje)
+            }
+        },
+        error: function(response){
+            console.log(JSON.stringify(response))
+        }
+    }); 
+}
+
+function consultarCategorias(){
+    $.ajax({
+        method: 'GET',
+        url: direccion+'/inicio.py',
+        dataType: "json",
+        success: function(response) {
+            console.log("imprimo aquí")
+            console.log(response)
+        },
+        error: function(response){
+            console.log(JSON.stringify(response))
+        }
+    });
+}
