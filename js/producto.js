@@ -1,3 +1,13 @@
+$(document).ready(function(){
+    if (getCookie("idCategoria")===""){
+        obtenerProducto()
+    }
+    else{
+        var obj={id:getCookie("idCategoria")};
+        obtenerIdProducto(obj);
+    }
+});
+
 $("#btnAgregar").click(function(e){
     e.preventDefault();
     var idCategoria=$("#idCategoria").val();

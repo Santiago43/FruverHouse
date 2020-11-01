@@ -1,4 +1,27 @@
 var direccion="/cgi-bin/FruverHouseBack";
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+}
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
 /**
  * 
  * @param {string} valor 
@@ -64,8 +87,7 @@ function consultarCategorias(obj){
         url: direccion+'/categoria.py',
         dataType: "json",
         success: function(response) {
-            console.log("imprimo aquí")
-            console.log(response)
+            pintarCategorias(response);
         },
         error: function(response){
             console.log(JSON.stringify(response))
@@ -175,15 +197,13 @@ function eliminarProducto(obj){
     });    
 }
 
-function obtenerProtuducto(obj){
+function obtenerProducto(){
     $.ajax({
         method: 'GET',
         url: direccion+'/producto.py',
-        data: obj,
         dataType: "json",
         success: function(response) {
-            console.log("Producto obtenido exitosamente")
-            console.log(response)
+            pintarProductos(response);
         },
         error: function(response){
             console.log("Error al obtener producto")
@@ -192,19 +212,55 @@ function obtenerProtuducto(obj){
     }); 
 }
 
-function obtenerIdProtuducto(obj){
+function obtenerIdProducto(obj){
     $.ajax({
         method: 'GET',
         url: direccion+'/producto.py',
         data: obj,
         dataType: "json",
         success: function(response) {
-            console.log("Productos obtenidos exitosamente")
-            console.log(response)
+            pintarProductos(response);
         },
         error: function(response){
             console.log("Error al obtener productos")
             console.log(JSON.stringify(response))
         }
     }); 
+}
+
+
+function pintarCategorias(categorias){
+    var txt="";
+    for (var i =0;i < categorias.length;i++) {
+        txt='<div id="'+categorias[i].idCategoria+'" class="card">';
+        txt+='<div class="image">';
+        txt+='<img src="'+categorias[i].imagen+'">';
+        txt+='</div>';
+        txt+='<div class="content">';
+        txt+='<div class="header">'+categorias[i].nombre+'</div>';
+        txt+='</div> </div> </div>';
+        $("#content").append(txt);
+        txt="";
+    }
+    
+}
+
+function pintarProductos(productos){
+    var txt="";
+    for (var i =0;i < productos.length;i++) {
+        txt+='<div id="'+productos[i].idProducto+'" class="card"> <div class="image">';
+        txt+='<img src="'+productos[i].imagen+'">';
+        txt+='</div>';
+        txt+='<div class="content">';
+        txt+='<div class="header">'+productos[i].nombre+'</div>';
+        txt+='<div class="meta">';
+        txt+='<a>'+productos[i].unidad+'</a>';
+        txt+='</div> </div>';
+        txt+='<div class="extra content">';
+        txt+='<span class="right floated"> Precio: '+productos[i].precio+'</span> </div> </div>';
+        $("#productos").append(txt);
+        txt="";
+    }
+    
+    
 }
