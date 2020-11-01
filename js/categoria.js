@@ -2,15 +2,11 @@ $("#btnAgregar").click(function(e){
     e.preventDefault();
     var nombre=$("#nombre").val();
     var imagen=$("#imagen").val();
-    if (consultarCategorias(nombre)===None) {
-        var obj={
-            nombre: nombre,
-            imagen: imagen
-        }  
-        crearCategoria(obj)
-    } else {
-        alert("Categoría existente")
-    }
+    var obj={
+        nombre: nombre,
+        imagen: imagen
+    };  
+    crearCategoria(obj);
 }
 );
 

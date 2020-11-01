@@ -107,7 +107,7 @@ function crearCategoria(obj){
             console.log(response)
         },
         error: function(response){
-            console.log("Erro al crear categoría")
+            console.log("Error al crear categoría")
             console.log(JSON.stringify(response))
         }
     }); 
