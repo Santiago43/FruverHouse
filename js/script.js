@@ -264,6 +264,5 @@ function pintarProductos(productos){
         $("#productos").append(txt);
         txt="";
     }
-    
-    
 }
+
