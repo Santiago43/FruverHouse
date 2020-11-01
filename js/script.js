@@ -234,7 +234,7 @@ function obtenerIdProducto(obj){
 function pintarCategorias(categorias){
     var txt="";
     for (var i =0;i < categorias.length;i++) {
-        txt='<div id="'+categorias[i].idCategoria+'" class="link card">';
+        txt='<div id="'+categorias[i].idCategoria+'" class="ui link card">';
         txt+='<div class="image">';
         txt+='<img src="'+categorias[i].imagen+'">';
         txt+='</div>';
