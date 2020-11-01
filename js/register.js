@@ -12,6 +12,7 @@ $("#btnRegistrar").click(function(e){
     var direccion=$("#direccion").val();
     var check=$("#check1").prop("checked");
     var cedula=$("#cedula").val();
+    var tipoDocumento=$("#tipoDocumento").val();
     if (validarEmail(email)){
         if(email!==emailc){
             alert("Los correos no coinciden");
@@ -32,7 +33,8 @@ $("#btnRegistrar").click(function(e){
                         contra: password,
                         telefono: telefono,
                         direccion: direccion,
-                        cedula: cedula
+                        cedula: cedula,
+                        tipoDocumento: tipoDocumento
                     };
                     registrarUsuario(obj);
                 }

@@ -22,6 +22,13 @@
             </div>
             <div class="ui ten wide column">
                 <form class="ui form" action="/" method="post">
+                    <select name="tipoDocumento" id="tipoDocumento" multiple="" class="ui fluid dropdown">
+                        <option value="">tipoDocumento</option>
+                      <option value="1">Cédula</option>
+                      <option value="2">Tarjeta de identidad</option>
+                      <option value="3">Cédula de extranjería</option>
+                      <option value="4">Pasaporte</option>
+                    </select>
                     Identificación: <input type="number" name="cedula" id="cedula">
                     Primer nombre: <input type="text" name="nombre1" id="n1">
                     Segundo nombre: <input type="text" name="nombre2" id="n2">
