@@ -81,7 +81,7 @@ function loginUsuario(obj){
     }); 
 }
 
-function consultarCategorias(obj){
+function consultarCategorias(){
     $.ajax({
         method: 'GET',
         url: direccion+'/categoria.py',
