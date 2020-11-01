@@ -87,6 +87,7 @@ function consultarCategorias(){
         url: direccion+'/categoria.py',
         dataType: "json",
         success: function(response) {
+            console.log(response);
             pintarCategorias(response);
         },
         error: function(response){
