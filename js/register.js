@@ -1,3 +1,4 @@
+/** Botón de registro*/
 $("#btnRegistrar").click(function(e){
     e.preventDefault();
     var primerNombre=$("#n1").val();
