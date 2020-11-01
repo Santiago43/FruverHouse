@@ -62,7 +62,6 @@ function consultarCategorias(obj){
     $.ajax({
         method: 'GET',
         url: direccion+'/categoria.py',
-        data: obj,
         dataType: "json",
         success: function(response) {
             console.log("imprimo aquí")
