@@ -253,7 +253,7 @@ function pintarProductos(productos){
         txt+='</div>';
         txt+='<div class="content">';
         txt+='<div class="header">'+productos[i].nombre+'</div>';
-        txt+='<div class="meta">';
+        txt+='<div class="meta">'
         txt+='<a>'+productos[i].unidad+'</a>';
         txt+='</div> </div>';
         txt+='<div class="extra content">';
