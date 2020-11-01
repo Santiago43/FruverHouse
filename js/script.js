@@ -56,10 +56,11 @@ function loginUsuario(obj){
     }); 
 }
 
-function consultarCategorias(){
+function consultarCategorias(obj){
     $.ajax({
-        method: 'GET',
-        url: direccion+'/inicio.py',
+        method: 'POST',
+        url: direccion+'/categoria.py',
+        data: obj,
         dataType: "json",
         success: function(response) {
             console.log("imprimo aquí")
@@ -69,4 +70,140 @@ function consultarCategorias(){
             console.log(JSON.stringify(response))
         }
     });
+}
+
+function crearCategoria(obj){
+    $.ajax({
+        method: 'POST',
+        url: direccion+'/categoria.py',
+        data: obj,
+        dataType: "json",
+        success: function(response) {
+            console.log("Categoría creada exitosamente")
+            console.log(response)
+        },
+        error: function(response){
+            console.log("Erro al crear categoría")
+            console.log(JSON.stringify(response))
+        }
+    }); 
+}
+
+function actualizarCategoria(obj){
+    $.ajax({
+        method: 'PUT',
+        url: direccion+'/categoria.py',
+        data: obj,
+        dataType: "json",
+        success: function(response) {
+            console.log("Categoría actualizada exitosamente")
+            console.log(response)
+        },
+        error: function(response){
+            console.log("Error al actualizar categoría ")
+            console.log(JSON.stringify(response))
+        }
+    }); 
+}
+
+function eliminarCategoria(obj){
+    $.ajax({
+        method: 'POST',
+        url: direccion+'/categoria.py',
+        data: obj,
+        dataType: "json",
+        success: function(response) {
+            console.log("Categoría eliminada exitosamente")
+            console.log(response)
+        },
+        error: function(response){
+            console.log("Error al eliminar categoría")
+            console.log(JSON.stringify(response))
+        }
+    }); 
+}
+
+function crearProtuducto(obj){
+    $.ajax({
+        method: 'POST',
+        url: direccion+'/producto.py',
+        data: obj,
+        dataType: "json",
+        success: function(response) {
+            console.log("Producto creado exitosamente")
+            console.log(response)
+        },
+        error: function(response){
+            console.log("Error al crear producto")
+            console.log(JSON.stringify(response))
+        }
+    }); 
+}
+
+function actualizarProducto(obj){
+    $.ajax({
+        method: 'PUT',
+        url: direccion+'/producto.py',
+        data: obj,
+        dataType: "json",
+        success: function(response) {
+            console.log("Producto actualizado exitosamente")
+            console.log(response)
+        },
+        error: function(response){
+            console.log("Error al actualizar producto ")
+            console.log(JSON.stringify(response))
+        }
+    }); 
+}
+
+function eliminarProducto(obj){
+    $.ajax({
+        method: 'DELETE',
+        url: direccion+'/producto.py',
+        data: obj,
+        dataType: "json",
+        success: function(response) {
+            console.log("Producto eliminado exitosamente")
+            console.log(response)
+        },
+        error: function(response){
+            console.log("Error al eliminar producto")
+            console.log(JSON.stringify(response))
+        }
+    });    
+}
+
+function obtenerProtuducto(obj){
+    $.ajax({
+        method: 'GET',
+        url: direccion+'/producto.py',
+        data: obj,
+        dataType: "json",
+        success: function(response) {
+            console.log("Producto obtenido exitosamente")
+            console.log(response)
+        },
+        error: function(response){
+            console.log("Error al obtener producto")
+            console.log(JSON.stringify(response))
+        }
+    }); 
+}
+
+function obtenerIdProtuducto(obj){
+    $.ajax({
+        method: 'GET',
+        url: direccion+'/producto.py',
+        data: obj,
+        dataType: "json",
+        success: function(response) {
+            console.log("Productos obtenidos exitosamente")
+            console.log(response)
+        },
+        error: function(response){
+            console.log("Error al obtener productos")
+            console.log(JSON.stringify(response))
+        }
+    }); 
 }
