@@ -5,7 +5,7 @@ $(document).ready(function(){
 function cargarSelectCategorias(){
     $.ajax({
         method: 'GET',
-        url: direccion+'/categorias.py',
+        url: direccion+'/categoria.py',
         dataType: "json",
         success: function(response) {
             cargarSelect(response);
