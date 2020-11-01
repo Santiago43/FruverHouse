@@ -105,7 +105,7 @@ function crearCategoria(obj){
         success: function(response) {
             console.log(response)
             alert("Categoría creada exitosamente")
-            $(location).('href','/FruverHouse/categoria.html')
+            $(location).attr('href','/FruverHouse/categoria.html')
         },
         error: function(response){
             console.log("Error al crear categoría")
