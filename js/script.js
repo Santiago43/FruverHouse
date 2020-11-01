@@ -58,7 +58,7 @@ function loginUsuario(obj){
 
 function consultarCategorias(obj){
     $.ajax({
-        method: 'POST',
+        method: 'GET',
         url: direccion+'/categoria.py',
         data: obj,
         dataType: "json",
