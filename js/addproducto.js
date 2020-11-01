@@ -6,7 +6,6 @@ function cargarSelectCategorias(){
     $.ajax({
         method: 'GET',
         url: direccion+'/categorias.py',
-        data: obj,
         dataType: "json",
         success: function(response) {
             cargarSelect(response);
