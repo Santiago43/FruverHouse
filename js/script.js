@@ -103,8 +103,9 @@ function crearCategoria(obj){
         data: obj,
         dataType: "json",
         success: function(response) {
-            console.log("Categoría creada exitosamente")
             console.log(response)
+            alert("Categoría creada exitosamente")
+            $(location).('href','/FruverHouse/categoria.html')
         },
         error: function(response){
             console.log("Error al crear categoría")
