@@ -44,7 +44,7 @@ function loginUsuario(obj){
         success: function(response) {
             if(response.tipo==="OK"){
                 alert("Mensaje: "+response.mensaje)
-                $(location).attr('href','/FruverHouse/main.html')
+                $(location).attr('href','/FruverHouse/categoria.html')
             }
             else{
                 alert("Error: "+response.mensaje)
