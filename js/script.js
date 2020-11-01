@@ -19,7 +19,8 @@ function registrarUsuario(obj){
         url: direccion+'/register.py',
         data: obj,
         dataType: "json",
-        success: function(response) {
+        success: function(rta) {
+            response=JSON.parse(rta);
             if(response.tipo==="OK"){
                 alert("Mensaje: "+response.mensaje)
                 $(location).attr('href','/FruverHouse/index.html')
@@ -41,7 +42,8 @@ function loginUsuario(obj){
         url: direccion+'/login.py',
         data: obj,
         dataType: "json",
-        success: function(response) {
+        success: function(rta) {
+            response=JSON.parse(rta);
             if(response.tipo==="OK"){
                 alert("Mensaje: "+response.mensaje)
                 $(location).attr('href','/FruverHouse/categoria.html')
