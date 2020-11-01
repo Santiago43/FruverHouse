@@ -234,13 +234,13 @@ function obtenerIdProducto(obj){
 function pintarCategorias(categorias){
     var txt="";
     for (var i =0;i < categorias.length;i++) {
-        txt='<div id="'+categorias[i].idCategoria+'" class="card">';
+        txt='<a><div id="'+categorias[i].idCategoria+'" class="card">';
         txt+='<div class="image">';
         txt+='<img src="'+categorias[i].imagen+'">';
         txt+='</div>';
         txt+='<div class="content">';
-        txt+='<div class="header"><a>'+categorias[i].nombre+'</a></div>';
-        txt+='</div> </div> </div>';
+        txt+='<div class="header">'+categorias[i].nombre+'</div>';
+        txt+='</div> </div> </div></a>';
         console.log(txt);
         $("#categorias").append(txt);
         txt="";
