@@ -3,7 +3,7 @@ $(document).ready(function(){
         obtenerProducto()
     }
     else{
-        var obj={id:getCookie("idCategoria")};
+        var obj={idCategoria:getCookie("idCategoria")};
         obtenerIdProducto(obj);
     }
 });
