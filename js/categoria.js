@@ -1,3 +1,4 @@
+/** Script de categorías */
 $("#btnAgregar").click(function(e){
     e.preventDefault();
     var nombre=$("#nombre").val();
