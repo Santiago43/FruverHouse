@@ -1,4 +1,8 @@
 /** Script de categorías */
+$(document).ready(function(){
+    consultarCategorias();
+});
+
 $("#btnAgregar").click(function(e){
     e.preventDefault();
     var nombre=$("#nombre").val();
@@ -35,3 +39,9 @@ $("#btnEliminar").click(function(e){
     eliminarCategoria(obj)
 }
 );
+
+$(".ui.cards").on("click", ".link.card", function(){
+    var idCategory = $(this).prop("id");
+		setCookie("idCategoria", idCategory, 0.0001);
+		window.location.assign("producto.html");
+});
