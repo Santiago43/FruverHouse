@@ -240,7 +240,8 @@ function pintarCategorias(categorias){
         txt+='<div class="content">';
         txt+='<div class="header">'+categorias[i].nombre+'</div>';
         txt+='</div> </div> </div>';
-        $("#content").append(txt);
+        console.log(txt);
+        $("#categorias").append(txt);
         txt="";
     }
     
