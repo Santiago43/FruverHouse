@@ -271,7 +271,7 @@ function pintarProductos(productos){
     var actproc = "refreshProducto.html";
     var deleproc = "deleteCategoria.html";
     for (var i =0;i < productos.length;i++) {
-        txt+='<div id="'+productos[i].idProducto+'" class="card">';
+        txt+='<div id="'+productos[i].idProducto+'" class="ui link card">';
         txt+='<div class="image">';
         txt+='<img src="'+productos[i].imagen+'">';
         txt+='</div>';
@@ -300,7 +300,7 @@ function pintarCategorias(categorias){
     var actcat = "refreshCategoria.html";
     var delecat = "deleteCategoria.html";
     for (var i =0;i < categorias.length;i++) {
-        txt+='<div id="'+categorias[i].idCategoria+'" class="card">';
+        txt+='<div id="'+categorias[i].idCategoria+'" class="ui link card">';
         txt+='<div class="image">';
         txt+='<img src="'+categorias[i].imagen+'">';
         txt+='</div>';
