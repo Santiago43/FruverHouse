@@ -8,33 +8,47 @@
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <body>
-    <div id="categorias"class="ui six cards">
-        <div class="card">
-          <div class="imagen">
-            <img src="/images.jpg">
-          </div>
-          <div class="content">
-            <a href='producto.html'><div class="nombre">Categoria</div></a>
-            <div class="meta">
-              <a>Nueva categoría</a>
+  <div class="ui grid">
+    <div class="ui row">
+      <div class="ui three wide column">
+
+
+      </div>
+      <div class="ui ten wide column">
+        <div id="categorias"class="ui six cards">
+          <div class="card">
+            <div class="imagen">
+              <img src="/images.jpg">
             </div>
-            <div class="description">
-              Inserte una nueva categoría.
+            <div class="content">
+              <a href='producto.html'><div class="nombre">Categoria</div></a>
+              <div class="meta">
+                <a>Nueva categoría</a>
+              </div>
+              <div class="description">
+                Inserte una nueva categoría.
+              </div>
+            </div>
+            <div class="extra content">
+              <span class="left floated">
+                <a href='addCategoria.html'><i class="big plus circle icon"></i></a>
+              </span>
+              <span style="position: absolute; left: 44%;" class="center floated">
+                <a href='deleteCategoria.html'><i class="big minus circle icon"></i></a>
+              </span>
+              <span class="right floated">
+                <a href='refreshCategoria.html'><i class="large redo icon"></i></a>
+              </span>
             </div>
           </div>
-          <div class="extra content">
-            <span class="left floated">
-              <a href='addCategoria.html'><i class="big plus circle icon"></i></a>
-            </span>
-            <span style="position: absolute; left: 44%;" class="center floated">
-              <a href='deleteCategoria.html'><i class="big minus circle icon"></i></a>
-            </span>
-            <span class="right floated">
-              <a href='refreshCategoria.html'><i class="large redo icon"></i></a>
-            </span>
-          </div>
-        </div>
-    </div>
+      </div>
+      </div>
+      <div class="ui three wide column">
+
+      </div>
+  </div>
+  </div>
+    
 </body>
 <script type="text/javascript" src="js/semantic.min.js"></script>
 <script src="js/script.js"></script>
