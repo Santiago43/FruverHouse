@@ -156,8 +156,9 @@ function crearProtuducto(obj){
         data: obj,
         dataType: "json",
         success: function(response) {
-            console.log("Producto creado exitosamente")
             console.log(response)
+            alert("Producto creado exitosamente")
+            $(location).attr('href','/FruverHouse/producto.html')
         },
         error: function(response){
             console.log("Error al crear producto")
@@ -173,8 +174,9 @@ function actualizarProducto(obj){
         data: obj,
         dataType: "json",
         success: function(response) {
-            console.log("Producto actualizado exitosamente")
             console.log(response)
+            alert("Producto actualizado exitosamente")
+            $(location).attr('href','/FruverHouse/producto.html')
         },
         error: function(response){
             console.log("Error al actualizar producto ")
