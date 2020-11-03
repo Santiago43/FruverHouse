@@ -235,33 +235,6 @@ function obtenerIdProducto(obj){
     }); 
 }
 
-
-/*function pintarCategorias(categorias){
-    var txt="";
-    var actcat = "refreshCategoria.html";
-    var delecat = "deleteCategoria.html";
-    for (var i =0;i < categorias.length;i++) {
-        txt='<div id="'+categorias[i].idCategoria+'" class="ui link card">';
-        txt+='<div class="image">';
-        txt+='<img src="'+categorias[i].imagen+'">';
-        txt+='</div>';
-        txt+='<div class="content">';
-        txt+='<div class="header">'+categorias[i].nombre+'</div>';
-        txt+='</div>';
-        txt+='<div class="extra content">';
-        txt+='<span class="left floated">';
-        txt+='<a href="'+actcat+'"><i class="big redo circle icon"></i></a>';
-        txt+='</span>';
-        txt+='<span style="position: absolute; left: 33%;" class="center floated"';
-        txt+='<a href="'+delecat+'"><i class="big minus circle icon"></i></a>';
-        txt+='</span>';
-        txt+='</div>';
-        txt+='</div>';
-        $("#categorias").append(txt);
-        txt="";
-    }
-   */
-
 /**
  * Función que pinta productos en tarjetas
  * @param {array} productos 
@@ -331,7 +304,7 @@ function cargarSelectCategorias(){
             cargarSelect(response);
         },
         error: function(response){
-            console.log("Error al obtener productos")
+            console.log("Error al obtener categorias")
             console.log(JSON.stringify(response))
         }
     }); 
@@ -344,5 +317,27 @@ function cargarSelect(categorias){
     for (var i=0;i< categorias.length;i++) {
         txt='<option value="'+categorias[i].idCategoria+'">'+categorias[i].nombre+'</option>'
         $("#idCategoria").append(txt);
+    }
+}
+
+function cargarSelectProductos(){
+    $.ajax({
+        method: 'GET',
+        url: direccion+'/producto.py',
+        dataType: "json",
+        success: function(response) {
+            cargarSelectProd(response);
+        },
+        error: function(response){
+            console.log("Error al obtener productos")
+            console.log(JSON.stringify(response))
+        }
+    }); 
+}
+
+function cargarSelectProd(productos){
+    for (var i=0;i< productos.length;i++) {
+        txt='<option value="'+productos[i].idProducto+'">'+productos[i].nombre+'</option>'
+        $("#idProducto").append(txt);
     }
 }
