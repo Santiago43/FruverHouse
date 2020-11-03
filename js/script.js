@@ -319,7 +319,7 @@ function cargarSelect(categorias){
         $("#idCategoria").append(txt);
     }
 }
-/*
+
 function cargarSelectProductos(){
     $.ajax({
         method: 'GET',
@@ -341,4 +341,3 @@ function cargarSelectProd(productos){
         $("#idProducto").append(txt);
     }
 }
-*/
