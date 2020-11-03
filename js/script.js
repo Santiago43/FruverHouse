@@ -121,8 +121,9 @@ function actualizarCategoria(obj){
         data: obj,
         dataType: "json",
         success: function(response) {
-            console.log("Categoría actualizada exitosamente")
             console.log(response)
+            alert("Categoría actualizada exitosamente")
+            $(location).attr('href','/FruverHouse/categoria.html')
         },
         error: function(response){
             console.log("Error al actualizar categoría ")
@@ -245,7 +246,6 @@ function pintarCategorias(categorias){
         txt+='<div class="content">';
         txt+='<div class="header">'+categorias[i].nombre+'</div>';
         txt+='</div>';
-        txt+='</div>';
         txt+='<div class="extra content">';
         txt+='<span class="left floated">';
         txt+='<a href="'+actcat+'"><i class="big redo circle icon"></i></a>';
@@ -267,7 +267,8 @@ function pintarProductos(productos){
     var actproc = "refreshProducto.html";
     var deleproc = "deleteCategoria.html";
     for (var i =0;i < productos.length;i++) {
-        txt+='<div id="'+productos[i].idProducto+'" class="card"> <div class="image">';
+        txt+='<div id="'+productos[i].idProducto+'" class="card">';
+        txt+='<div class="image">';
         txt+='<img src="'+productos[i].imagen+'">';
         txt+='</div>';
         txt+='<div class="content">';
