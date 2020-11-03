@@ -134,7 +134,7 @@ function actualizarCategoria(obj){
 
 function eliminarCategoria(obj){
     $.ajax({
-        method: 'POST',
+        method: 'DELETE',
         url: direccion+'/categoria.py',
         data: obj,
         dataType: "json",
