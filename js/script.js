@@ -255,7 +255,7 @@ function pintarCategorias(categorias){
         txt+='</span>';
         txt+='</div>';
         txt+='</div>';
-        $("#content").append(txt);
+        $("#categorias").append(txt);
         txt="";
     }
     
