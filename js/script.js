@@ -242,7 +242,7 @@ function obtenerIdProducto(obj){
 function pintarProductos(productos){
     var txt="";
     var actproc = "refreshProducto.html";
-    var deleproc = "deleteCategoria.html";
+    var deleproc = "deleteProducto.html";
     for (var i =0;i < productos.length;i++) {
         txt+='<div id="'+productos[i].idProducto+'" class="ui link card">';
         txt+='<div class="image">';
