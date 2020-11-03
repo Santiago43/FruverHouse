@@ -13,6 +13,9 @@ $(document).ready(function(){
         cargarSelectCategorias();
         cargarSelectProductos();
     }
+    else if (document.title==="Eliminar Producto - Fruver House"){
+        cargarSelectCategorias();
+    }
     else{
         consultarCategorias();
     }
