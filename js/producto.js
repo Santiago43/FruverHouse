@@ -6,7 +6,7 @@ $(document).ready(function(){
         cargarSelectProductos();
     }
     else if (document.title==="Eliminar Producto - Fruver House"){
-        cargarSelectCategorias();
+        cargarSelectProductos()
     }
     else{
         if (getCookie("idCategoria")===""){
