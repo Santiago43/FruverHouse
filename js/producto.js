@@ -1,12 +1,4 @@
-$(document).ready(function(){
-    if (getCookie("idCategoria")===""){
-        obtenerProducto()
-    }
-    else{
-        var obj={idCategoria:getCookie("idCategoria")};
-        obtenerIdProducto(obj);
-    }
-});
+
 
 $(document).ready(function(){
     if (document.title==="Actualizar Producto - Fruver House"){
@@ -17,7 +9,13 @@ $(document).ready(function(){
         cargarSelectCategorias();
     }
     else{
-        consultarCategorias();
+        if (getCookie("idCategoria")===""){
+            obtenerProducto()
+        }
+        else{
+            var obj={idCategoria:getCookie("idCategoria")};
+            obtenerIdProducto(obj);
+        }
     }
 });
 
