@@ -198,7 +198,9 @@ function eliminarProducto(obj){
         }
     });    
 }
-
+ /**
+  * Obtiene una lista de productos de una categoría
+  */
 function obtenerProducto(){
     $.ajax({
         method: 'GET',
