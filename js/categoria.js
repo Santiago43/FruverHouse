@@ -1,6 +1,6 @@
 /** Script de categorías */
 $(document).ready(function(){
-    if (document.title==="Actualizar Categoria - Fruver House"){
+    if (document.title==="Actualizar Categoría - Fruver House"){
         cargarSelectCategorias()
     }
     else{
