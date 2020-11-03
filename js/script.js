@@ -248,11 +248,12 @@ function pintarCategorias(categorias){
         txt+='</div>';
         txt+='<div class="extra content">';
         txt+='<span class="left floated">';
-        txt+='<a href="'+actcat+'"><i class="big plus circle icon"></i></a>';
+        txt+='<a href="'+actcat+'"><i class="big redo circle icon"></i></a>';
         txt+='</span>';
-        txt+='<span class="right floated">';
+        txt+='<span style="position: absolute; left: 33%;" class="center floated"';
         txt+='<a href="'+delecat+'"><i class="big minus circle icon"></i></a>';
         txt+='</span>';
+        txt+='</div>';
         txt+='</div>';
         console.log(txt);
         $("#categorias").append(txt);
@@ -275,7 +276,15 @@ function pintarProductos(productos){
         txt+='<a>'+productos[i].unidad+'</a>';
         txt+='</div> </div>';
         txt+='<div class="extra content">';
-        txt+='<span class="right floated"> Precio: '+productos[i].precio+'</span> </div> </div>';
+        txt+='<span class="right floated"> Precio: '+productos[i].precio+'</span>';
+        txt+='<span class="left floated">';
+        txt+='<a href="'+actproc+'"><i class="big redo circle icon"></i></a>';
+        txt+='</span>';
+        txt+='<span style="position: absolute; left: 33%;" class="center floated"';
+        txt+='<a href="'+deleproc+'"><i class="big minus circle icon"></i></a>';
+        txt+='</span>';
+        txt+='</div>';
+        txt+='</div>';
         $("#productos").append(txt);
         txt="";
     }
