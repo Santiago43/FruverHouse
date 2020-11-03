@@ -233,6 +233,8 @@ function obtenerIdProducto(obj){
 
 function pintarCategorias(categorias){
     var txt="";
+    var actcat = "refreshCategoria.html";
+    var delecat = "deleteCategoria.html";
     for (var i =0;i < categorias.length;i++) {
         txt='<div id="'+categorias[i].idCategoria+'" class="ui link card">';
         txt+='<div class="image">';
@@ -240,7 +242,16 @@ function pintarCategorias(categorias){
         txt+='</div>';
         txt+='<div class="content">';
         txt+='<div class="header">'+categorias[i].nombre+'</div>';
-        txt+='</div> </div> </div>';
+        txt+='</div>';
+        txt+='</div>';
+        txt+='<div class="extra content">';
+        txt+='<span class="left floated">';
+        txt+='<a href="'+actcat+'"><i class="big plus circle icon"></i></a>';
+        txt+='</span>';
+        txt+='<span class="right floated">';
+        txt+='<a href="'+delecat+'"><i class="big minus circle icon"></i></a>';
+        txt+='</span>';
+        txt+='</div>';
         console.log(txt);
         $("#categorias").append(txt);
         txt="";
@@ -250,6 +261,8 @@ function pintarCategorias(categorias){
 
 function pintarProductos(productos){
     var txt="";
+    var actproc = "refreshProducto.html";
+    var deleproc = "deleteCategoria.html";
     for (var i =0;i < productos.length;i++) {
         txt+='<div id="'+productos[i].idProducto+'" class="card"> <div class="image">';
         txt+='<img src="'+productos[i].imagen+'">';

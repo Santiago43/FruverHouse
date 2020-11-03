@@ -22,7 +22,7 @@ $("#btnAgregar").click(function(e){
         precio: precio,
         imagen: imagen
     }  
-    crearCategoria(obj)
+    crearProtuducto(obj)
 }
 );
 
