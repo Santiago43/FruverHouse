@@ -139,8 +139,9 @@ function eliminarCategoria(obj){
         data: obj,
         dataType: "json",
         success: function(response) {
-            console.log("Categoría eliminada exitosamente")
             console.log(response)
+            alert("Categoría eliminada exitosamente")
+            $(location).attr('href','/FruverHouse/categoria.html')
         },
         error: function(response){
             console.log("Error al eliminar categoría")
@@ -193,6 +194,8 @@ function eliminarProducto(obj){
         dataType: "json",
         success: function(response) {
             console.log(response)
+            alert("Producto eliminado exitosamente")
+            $(location).attr('href','/FruverHouse/producto.html')
         },
         error: function(response){
             console.log("Error al eliminar producto")
