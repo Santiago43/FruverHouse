@@ -1,6 +1,11 @@
 /** Script de categorías */
 $(document).ready(function(){
-    consultarCategorias();
+    if (document.title==="Actualizar Categoria - Fruver House"){
+        cargarSelectCategorias()
+    }
+    else{
+        consultarCategorias()
+    }
 });
 
 $("#btnAgregar").click(function(e){
