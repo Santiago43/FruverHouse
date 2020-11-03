@@ -295,10 +295,10 @@ function pintarProductos(productos){
     }
 }
 
-function pintarCategorias(productos){
+function pintarCategorias(categorias){
     var txt="";
-    var actproc = "refreshCategoria.html";
-    var deleproc = "deleteCategoria.html";
+    var actcat = "refreshCategoria.html";
+    var delecat = "deleteCategoria.html";
     for (var i =0;i < categorias.length;i++) {
         txt+='<div id="'+categorias[i].idCategoria+'" class="card">';
         txt+='<div class="image">';
