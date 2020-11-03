@@ -236,7 +236,7 @@ function obtenerIdProducto(obj){
 }
 
 
-function pintarCategorias(categorias){
+/*function pintarCategorias(categorias){
     var txt="";
     var actcat = "refreshCategoria.html";
     var delecat = "deleteCategoria.html";
@@ -260,7 +260,7 @@ function pintarCategorias(categorias){
         $("#categorias").append(txt);
         txt="";
     }
-    
+   */
 }
 /**
  * Función que pinta productos en tarjetas
@@ -282,6 +282,33 @@ function pintarProductos(productos){
         txt+='</div> </div>';
         txt+='<div class="extra content">';
         txt+='<span class="right floated"> Precio: '+productos[i].precio+'</span>';
+        txt+='<span class="left floated">';
+        txt+='<a href="'+actproc+'"><i class="big redo circle icon"></i></a>';
+        txt+='</span>';
+        txt+='<span style="position: absolute; left: 33%;" class="center floated"';
+        txt+='<a href="'+deleproc+'"><i class="big minus circle icon"></i></a>';
+        txt+='</span>';
+        txt+='</div>';
+        txt+='</div>';
+        $("#productos").append(txt);
+        txt="";
+    }
+}
+
+function pintarCategorias(productos){
+    var txt="";
+    var actproc = "refreshCategoria.html";
+    var deleproc = "deleteCategoria.html";
+    for (var i =0;i < categorias.length;i++) {
+        txt+='<div id="'+categorias[i].idCategoria+'" class="card">';
+        txt+='<div class="image">';
+        txt+='<img src="'+categorias[i].imagen+'">';
+        txt+='</div>';
+        txt+='<div class="content">';
+        txt+='<div class="header">'+categorias[i].nombre+'</div>';
+        txt+='</div>';
+        txt+='<div class="extra content">';
+        txt+='<span class="right floated"> Precio: '+categorias[i].idCategoria+'</span>';
         txt+='<span class="left floated">';
         txt+='<a href="'+actproc+'"><i class="big redo circle icon"></i></a>';
         txt+='</span>';
