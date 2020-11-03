@@ -285,7 +285,7 @@ function pintarProductos(productos){
         txt+='<span class="left floated">';
         txt+='<a href="'+actproc+'"><i class="big redo circle icon"></i></a>';
         txt+='</span>';
-        txt+='<span style="position: absolute; left: 33%;" class="center floated"';
+        txt+='<span style="position: absolute; left: 33%;" class="center floated">';
         txt+='<a href="'+deleproc+'"><i class="big minus circle icon"></i></a>';
         txt+='</span>';
         txt+='</div>';
@@ -308,11 +308,11 @@ function pintarCategorias(categorias){
         txt+='<div class="header">'+categorias[i].nombre+'</div>';
         txt+='</div>';
         txt+='<div class="extra content">';
-        txt+='<span class="right floated"> Precio: '+categorias[i].idCategoria+'</span>';
+        txt+='<span class="right floated"> id: '+categorias[i].idCategoria+'</span>';
         txt+='<span class="left floated">';
         txt+='<a href="'+actcat+'"><i class="big redo circle icon"></i></a>';
         txt+='</span>';
-        txt+='<span style="position: absolute; left: 33%;" class="center floated"';
+        txt+='<span style="position: absolute; left: 33%;" class="center floated">';
         txt+='<a href="'+delecat+'"><i class="big minus circle icon"></i></a>';
         txt+='</span>';
         txt+='</div>';
