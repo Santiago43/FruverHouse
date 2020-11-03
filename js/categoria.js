@@ -39,7 +39,7 @@ $("#btnEliminar").click(function(e){
     e.preventDefault();
     var idCategoria=$("#idCategoria").val();
     var obj={
-        idCategoria: idCategoria,
+        idCategoria: idCategoria
     };
     eliminarCategoria(obj)
 }

@@ -192,7 +192,6 @@ function eliminarProducto(obj){
         data: obj,
         dataType: "json",
         success: function(response) {
-            console.log("Producto eliminado exitosamente")
             console.log(response)
         },
         error: function(response){
