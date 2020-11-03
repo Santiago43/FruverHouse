@@ -261,7 +261,7 @@ function obtenerIdProducto(obj){
         txt="";
     }
    */
-}
+
 /**
  * Función que pinta productos en tarjetas
  * @param {array} productos 
