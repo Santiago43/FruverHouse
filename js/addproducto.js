@@ -16,7 +16,10 @@ function cargarSelectCategorias(){
         }
     }); 
 }
-
+/**
+ * Función que carga un select
+ * @param {array} categorias 
+ */
 function cargarSelect(categorias){
     for (var i=0;i< categorias.length;i++) {
         txt='<option value="'+categorias[i].idCategoria+'">'+categorias[i].nombre+'</option>'
