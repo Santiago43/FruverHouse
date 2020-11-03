@@ -8,6 +8,17 @@ $(document).ready(function(){
     }
 });
 
+$(document).ready(function(){
+    if (document.title==="Actualizar Producto - Fruver House"){
+        cargarSelectCategorias();
+        cargarSelectProductos();
+    }
+    else{
+        consultarCategorias();
+        obtenerProducto();
+    }
+});
+
 $("#btnAgregar").click(function(e){
     e.preventDefault();
     var idCategoria=$("#idCategoria").val();
