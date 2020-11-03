@@ -261,7 +261,10 @@ function pintarCategorias(categorias){
     }
     
 }
-
+/**
+ * Función que pinta productos en tarjetas
+ * @param {array} productos 
+ */
 function pintarProductos(productos){
     var txt="";
     var actproc = "refreshProducto.html";
