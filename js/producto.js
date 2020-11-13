@@ -1,4 +1,8 @@
-
+$("#addProducto").click(function(e){
+    e.preventDefault();
+    alert("Producto agregado correctamente")
+}
+);
 
 $(document).ready(function(){
     if (document.title==="Actualizar Producto - Fruver House"){
