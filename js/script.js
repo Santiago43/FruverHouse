@@ -243,26 +243,20 @@ function obtenerIdProducto(obj){
  */
 function pintarProductos(productos){
     var txt="";
-    var actproc = "refreshProducto.html";
-    var deleproc = "deleteProducto.html";
     for (var i =0;i < productos.length;i++) {
         txt+='<div id="'+productos[i].idProducto+'" class="ui link card">';
         txt+='<div class="image">';
         txt+='<img src="'+productos[i].imagen+'">';
         txt+='</div>';
-        txt+='<div class="content">';
-        txt+='<div class="header">'+productos[i].nombre+'</div>';
-        txt+='<div class="meta">'
-        txt+='<a>'+productos[i].unidad+'</a>';
-        txt+='</div> </div>';
         txt+='<div class="extra content">';
-        txt+='<span class="right floated"> Precio: '+productos[i].precio+'</span>';
+        txt+='<span class="right floated"> <i class="dollar sign icon"></i>'+productos[i].precio+'</span>';
         txt+='<span class="left floated">';
-        txt+='<a href="'+actproc+'"><i class="big redo circle icon"></i></a>';
+        txt+=productos[i].unidad;
         txt+='</span>';
-        txt+='<span style="position: absolute; left: 33%;" class="center floated">';
-        txt+='<a href="'+deleproc+'"><i class="big minus circle icon"></i></a>';
-        txt+='</span>';
+        txt+='</div>';
+        txt+='<div class="ui green bottom attached button" id="addProducto">';
+        txt+='<i class="shop icon"></i>';
+        txt+='Agregar al carrito';
         txt+='</div>';
         txt+='</div>';
         $("#productos").append(txt);
