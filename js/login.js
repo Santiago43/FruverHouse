@@ -11,5 +11,8 @@ $("#Ingresar").click(function(e){
     }else{
         alert("Formato de correo inválido") 
     }
-
 });
+
+$("#register").click(function(){
+    $(location).attr('href','register.html')
+})

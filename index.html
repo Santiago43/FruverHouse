@@ -3,12 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/semantic.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Fruver House - Frutas y verduras a tu casa</title>
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 <body>
-    Regístrate:
-    <a href="register.html">Click aquí</a>
-    Ingresa:
-    <a href="login.html">Click aquí</a>
+    <div class="ui grid">
+        <div class="ui inverted massive green fixed menu">
+            <div class="menu">
+                <label class="item fruverHouse">FruverHouse - Frutas y verduras a tu casa</label> 
+            </div>
+            <div class="ui simple dropdown item">
+                Productos <i class="dropdown icon"></i>
+                <div class="green menu">
+                  <a class="item" href="producto.html">Conoce nuestros productos</a>
+                </div>
+            </div>
+            <div class="ui simple dropdown item">
+                Categorias <i class="dropdown icon"></i>
+                <div class="green menu">
+                  <a class="item" href="categoria.html">Conoce nuestras categorias</a>
+                </div>
+            </div>
+            <div class="right menu">
+                <div class="item">
+                    <div class="ui orange button">Regístrate</div>
+                </div>
+                </div>
+        </div>
+        <div class="ui row">
+            <div class="ui one wide column">
+
+            </div>
+            <div id="contenido" class="ui olive fourteen wide column">
+
+                <div class="ui inverted olive vertical masthead center aligned segment">
+                    <div class="ui row">
+                        <div class="ui text container">
+                            
+                            <img src="img/FruverHouse-logo.png" alt="logo">
+                            <h1 class="ui inverted header">
+                                FruverHouse: frutas y verduras a tu casa
+                            </h1>
+                            <h2>Tenemos los mejores productos agrícolas para ti</h2>
+                            <div class="ui huge orange button">Conoce nuestros productos <i class="right arrow icon"></i></div>
+                          </div>
+                    </div>
+                
+                    
+                
+                </div>
+
+                <div class="slider">
+                    <ul>
+                        <li><img src="img/frutas1.jpg" alt=""></li>
+                        <li><img src="img/FrutosAmarillos.jpg" alt=""></li>
+                        <li><img src="img/legumbres.jpeg" alt=""></li>
+                        <li><img src="img/Tubérculos.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <div class="ui placeholder segment">
+                    <div class="ui vertical black divider">
+                        
+                    </div>
+                    <div  id="acceso" class="clear ui two column very relaxed stackable grid gray">
+                        <div class="column">
+                            <div id="encabezadoLogin" class="ui huge header">Ingresa</div>
+                            <div class="ui form">
+                                <div class="field">
+                                    <label for="loginCorreo">Correo</label>
+                                    <div id="userLogin" class="ui left icon input">
+                                        <input id="email" name="loginCorreo" type="text" placeholder="Correo">
+                                        <i class="at icon"></i>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label for="loginPassword">Password</label>
+                                    <div id="passwordLogin" class="ui left icon input">
+                                        <input id="pass" name="loginPassword" type="password" placeholder="Contraseña">
+                                        <i class="lock icon"></i>
+                                    </div>
+                                </div>
+                                <button id="Ingresar" class="ui green submit button">Ingresa</button>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div id="encabezadoRegister" class="ui huge header">Regístrate</div>
+                            <div class="middle aligned column">
+                                <button id="register" class="ui big orange button">
+                                  <i class="signup icon"></i>
+                                    Regístrate
+                                </button>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui one wide column">
+
+            </div>
+        </div>
+        <div id="footer" class="ui row">
+
+        </div>
+    </div>
 </body>
+<script src="js/semantic.min.js"></script>
+
+<script src="js/script.js"></script>
+<script src="js/login.js"></script>
 </html>
