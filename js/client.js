@@ -33,3 +33,4 @@ $("#categorias").on("click", "a", function(){
 function limpiarVentana(){
     $("#productos").empty();
 }
+

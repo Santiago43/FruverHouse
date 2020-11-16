@@ -1,9 +1,3 @@
-$("#addProducto").click(function(e){
-    e.preventDefault();
-    alert("Producto agregado correctamente")
-}
-);
-
 $(document).ready(function(){
     if (document.title==="Actualizar Producto - Fruver House"){
         cargarSelectCategorias();
@@ -72,3 +66,15 @@ $("#btnEliminar").click(function(e){
     eliminarProducto(obj)
 }
 );
+
+$("#addProducto").click(function(e){
+    e.preventDefault();
+    alert("Producto agregado correctamente")
+}
+);
+
+$(".ui.card").on("click", ".link.card", function(){
+    var idProducto = $(this).prop("id");
+    setCookie(idProducto,getCookie(idProducto)+1,"3");
+    alert("Producto añadido al carrito");
+});
