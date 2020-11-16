@@ -36,6 +36,6 @@ function limpiarVentana(){
 
 $("#productos").on("click", ".ui.green.bottom.attached.button", function(){
     var idProducto = $(this).prop("id");
-    setCookie(idProducto,(parseFloat(getCookie(idProducto))+1).toString,"3");
+    setCookie(idProducto,(parseFloat(getCookie(idProducto))+1).toString(),"3");
     alert("Producto añadido al carrito");
 });
