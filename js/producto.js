@@ -73,7 +73,7 @@ $("#addProducto").click(function(e){
 }
 );
 
-$(".ui.card").on("click", ".link.card", function(){
+$(".ui.link.card").on("click", ".button", function(){
     var idProducto = $(this).prop("id");
     setCookie(idProducto,getCookie(idProducto)+1,"3");
     alert("Producto añadido al carrito");
