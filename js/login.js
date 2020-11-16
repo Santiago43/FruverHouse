@@ -16,3 +16,6 @@ $("#Ingresar").click(function(e){
 $("#register").click(function(){
     $(location).attr('href','register.html')
 })
+$(".ui.huge.orange.button").click(function(){
+    $(location).attr('href','producto.html')
+})
