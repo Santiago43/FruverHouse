@@ -8,48 +8,78 @@
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <body>
-  <div class="ui grid">
-    <div class="ui row">
-      <div class="ui three wide column">
-
-
-      </div>
-      <div class="ui ten wide column">
-        <div id="categorias"class="ui four cards">
-          <div class="card">
-            <div class="imagen">
-              <img src="/images.jpg">
+    <div class="ui grid">
+        <div class="ui inverted massive green fixed menu">
+            <div class="menu">
+                <label class="item fruverHouse">FruverHouse - Frutas y verduras a tu casa</label> 
             </div>
-            <div class="content">
-              <a href='producto.html'><div class="nombre">Categoria</div></a>
-              <div class="meta">
-                <a>Nueva categoría</a>
-              </div>
-              <div class="description">
-                Inserte una nueva categoría.
-              </div>
+            <div class="ui simple dropdown item">
+                Productos <i class="dropdown icon"></i>
+                <div class="green menu">
+                    <a class="item" href="producto.html">Conoce nuestros productos</a>
+                </div>
             </div>
-            <div class="extra content">
-              <span class="left floated">
-                <a href='addCategoria.html'><i class="big plus circle icon"></i></a>
-              </span>
-              <span style="position: absolute; left: 44%;" class="center floated">
-                <a href='deleteCategoria.html'><i class="big minus circle icon"></i></a>
-              </span>
-              <span class="right floated">
-                <a href='refreshCategoria.html'><i class="large redo icon"></i></a>
-              </span>
+            <div class="ui simple dropdown item">
+                Categorias <i class="dropdown icon"></i>
+                <div class="green menu">
+                    <a class="item" href="categoria.html">Conoce nuestras categorias</a>
+                </div>
             </div>
-          </div>
-      </div>
-      </div>
-      <div class="ui three wide column">
-
-      </div>
-  </div>
-  
-  </div>
-  <a href="/FruverHouse/categoria.html">Regresar</a>
+            <div class="right menu">
+                <div class="item">
+                    <div class="ui vertical animated inverted orange button" tabindex="0">
+                        <div class="hidden content">Carrito</div>
+                        <div class="visible content">
+                          <i class="shop icon"></i>
+                        </div>
+                      </div>
+                </div>
+                <div class="item">
+                    <div class="ui orange button">Regístrate</div>
+                </div>
+            </div>
+        </div>
+        <div class="ui row">
+            <div class="ui three wide column">
+                
+                
+            </div>
+            <div class="ui ten wide column">
+                <div id="categorias"class="ui four cards">
+                    <div class="card">
+                        <div class="imagen">
+                            <img src="/images.jpg">
+                        </div>
+                        <div class="content">
+                            <a href='producto.html'><div class="nombre">Categoria</div></a>
+                            <div class="meta">
+                                <a>Nueva categoría</a>
+                            </div>
+                            <div class="description">
+                                Inserte una nueva categoría.
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <span class="left floated">
+                                <a href='addCategoria.html'><i class="big plus circle icon"></i></a>
+                            </span>
+                            <span style="position: absolute; left: 44%;" class="center floated">
+                                <a href='deleteCategoria.html'><i class="big minus circle icon"></i></a>
+                            </span>
+                            <span class="right floated">
+                                <a href='refreshCategoria.html'><i class="large redo icon"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui three wide column">
+                
+            </div>
+        </div>
+        
+    </div>
+    <a href="/FruverHouse/categoria.html">Regresar</a>
 </body>
 <script type="text/javascript" src="js/semantic.min.js"></script>
 <script src="js/script.js"></script>
