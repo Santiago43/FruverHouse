@@ -47,7 +47,7 @@ function getCookies(){
 
 function pintarProductosAComprar(totales){
     for (let i = 0; i < totales.length; i++) {
-        const element = array[i];
+        
         
     }
 }  
