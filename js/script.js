@@ -244,7 +244,7 @@ function obtenerIdProducto(obj){
 function pintarProductos(productos){
     var txt="";
     for (var i =0;i < productos.length;i++) {
-        txt+='<div id="'+productos[i].idProducto+'" class="ui link card">';
+        txt+='<div class="ui link card">';
         txt+='<div class="image">';
         txt+='<img src="'+productos[i].imagen+'">';
         txt+='</div>';
@@ -254,7 +254,7 @@ function pintarProductos(productos){
         txt+=productos[i].nombre+'  '+productos[i].unidad;
         txt+='</span>';
         txt+='</div>';
-        txt+='<button class="ui green bottom attached button" id="addProducto">';
+        txt+='<button id="'+productos[i].idProducto+'" class="ui green bottom attached button">';
         txt+='<i class="shop icon"></i>';
         txt+='Agregar al carrito';
         txt+='</button>';
