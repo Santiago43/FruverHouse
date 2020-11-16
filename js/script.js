@@ -223,7 +223,7 @@ function obtenerProducto(){
             var botones= $(".ui.green.bottom.attached.button")
             for (let i = 0; i < botones.length; i++) {
                 botones[i].click(function(){
-                    var idProducto = $(this).prop("id");
+                    var idProducto = botones[i].prop("id");
                     setCookie(idProducto,getCookie(idProducto)+1,"3");
                     alert("Producto añadido al carrito");
                 }) 

@@ -34,3 +34,7 @@ function limpiarVentana(){
     $("#productos").empty();
 }
 
+$("#productos").on("click", ".ui.green.bottom.attached.button", function(){
+    var idCategory = $(this).prop("id");
+    obtenerIdProducto(obj);
+});
