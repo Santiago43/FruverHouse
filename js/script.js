@@ -254,10 +254,10 @@ function pintarProductos(productos){
         txt+=productos[i].nombre+'  '+productos[i].unidad;
         txt+='</span>';
         txt+='</div>';
-        txt+='<div class="ui green bottom attached button" id="addProducto">';
+        txt+='<button class="ui green bottom attached button" id="addProducto">';
         txt+='<i class="shop icon"></i>';
         txt+='Agregar al carrito';
-        txt+='</div>';
+        txt+='</button>';
         txt+='</div>';
         $("#productos").append(txt);
         txt="";
