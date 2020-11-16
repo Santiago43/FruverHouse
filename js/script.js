@@ -1,3 +1,4 @@
+//import 'client.js'
 var direccion="/cgi-bin/FruverHouseBack";
 
 function getCookie(cname) {
@@ -217,6 +218,16 @@ function obtenerProducto(){
         error: function(response){
             console.log("Error al obtener producto")
             console.log(JSON.stringify(response))
+        },
+        after: function(e){
+            var botones= $(".ui.green.bottom.attached.button")
+            for (let i = 0; i < botones.length; i++) {
+                botones[i].click(function(){
+                    var idProducto = $(this).prop("id");
+                    setCookie(idProducto,getCookie(idProducto)+1,"3");
+                    alert("Producto añadido al carrito");
+                }) 
+            }
         }
     }); 
 }
