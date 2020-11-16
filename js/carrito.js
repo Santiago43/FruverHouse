@@ -46,8 +46,13 @@ function getCookies(){
 }
 
 function pintarProductosAComprar(totales){
+    var txt="";
     for (let i = 0; i < totales.length; i++) {
-        
-        
+        txt='<div class="item">'
+        txt+='<div class="ui tiny image">'
+        txt+='<img src="'+totales[i].imagen+'"></div>'
+        txt+='<div class="middle aligned content">'
+        txt+='<a class="header">'+totales[i].nombre+'</a></div></div>'
+        $(".ui.items").append(txt);       
     }
 }  
