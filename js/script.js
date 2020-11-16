@@ -251,7 +251,7 @@ function pintarProductos(productos){
         txt+='<div class="extra content">';
         txt+='<span class="right floated"> <i class="dollar sign icon"></i>'+productos[i].precio+'</span>';
         txt+='<span class="left floated">';
-        txt+=productos[i].unidad;
+        txt+=productos[i].nombre+'  '+productos[i].unidad;
         txt+='</span>';
         txt+='</div>';
         txt+='<div class="ui green bottom attached button" id="addProducto">';
