@@ -19,7 +19,7 @@ function cargarMenuLateralCategorias(){
 
 function pintarCategoriasEnMenu(categorias){
     for (let i = 0; i < categorias.length; i++) {
-        $("#categorias").append(' <a class="item"> '+categorias[i].nombre+' </a>');
+        $("#categorias").append(' <a id="'+categorias[i].idCategoria+'"class="item"> '+categorias[i].nombre+' </a>');
     }
 }
 
