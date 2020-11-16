@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 })
 
-var getCookies = function(){
+function getCookies(){
     var pairs = document.cookie.split(";");
     var cookies = {};
     for (var i=0; i<pairs.length; i++){
