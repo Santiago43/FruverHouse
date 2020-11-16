@@ -15,21 +15,21 @@
                 <label class="item fruverHouse">FruverHouse - Frutas y verduras a tu casa</label> 
             </div>
             <div class="ui simple dropdown item">
-                Productos <i class="dropdown icon"></i>
-                <div class="green menu">
-                    <a class="item" href="producto.html">Conoce nuestros productos</a>
-                </div>
-            </div>
-            <div class="ui simple dropdown item">
                 Categorias <i class="dropdown icon"></i>
                 <div class="green menu">
                     <a class="item" href="categoria.html">Conoce nuestras categorias</a>
                 </div>
             </div>
+            <div class="ui simple dropdown item">
+                Productos <i class="dropdown icon"></i>
+                <div class="green menu">
+                    <a class="item" href="producto.html">Conoce nuestros productos</a>
+                </div>
+            </div>
             <div class="right menu">
-                <div class="item">
-                    <div class="ui vertical animated inverted orange button" tabindex="0">
-                        <div class="hidden content">Carrito</div>
+                <div class="item" data-tooltip="(1)" data-inverted="">
+                    <div id="carrito" class="ui vertical animated inverted orange button" tabindex="0" >
+                        <div class="hidden content" >Carrito</div>
                         <div class="visible content">
                           <i class="shop icon"></i>
                         </div>
@@ -42,16 +42,12 @@
         </div>
         <div class="ui row">
             <div class="ui three wide column">
-                
-                
+
             </div>
-            <div id="contenido" class="ui olive ten wide column">
-                <div id="categorias"class="ui four cards">
-                    <div class="card">
-                        <div class="imagen">
-                            <img src="/images.jpg">
-                        </div>
-                    </div>
+            <div id="contenido" class="ui olive ten wide column">    
+                    <h1 class="fruverHouse">Categorías</h1>
+                <div id="categorias" class="ui three stackable cards">
+                    
                 </div>
             </div>
             <div class="ui three wide column">

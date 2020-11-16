@@ -337,3 +337,8 @@ function cargarSelectProd(productos){
         $("#idProducto").append(txt);
     }
 }
+
+$("#carrito").click(function(){
+    $(location).attr('href','carrito.html')
+
+});
