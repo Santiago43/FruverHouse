@@ -27,7 +27,7 @@ function organizarCarro(productos){
     productosEnCarro=getCookies();
     for (let i = 0; i < productosEnCarro.length; i++) {
         for (let j = 0; j < productos.length; j++) {
-            if(productosEnCarro[i].hasOwnProperty(productos[i].idProducto)){
+            if(productosEnCarro.hasOwnProperty(productos[i].idProducto)){
                 var obj = {idProducto: productos[j].idProducto,nombre:productos[j].nombre,cantidad:productosEnCarro[i]};
                 totales.push(obj)
                 continue;
