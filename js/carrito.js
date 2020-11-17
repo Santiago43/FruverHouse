@@ -27,7 +27,7 @@ function organizarCarro(productos){
     productosEnCarro=getCookies();
     for (let j = 0; j < productos.length; j++) {
         if(productosEnCarro.hasOwnProperty(productos[j].idProducto)){
-            var obj = {idProducto: productos[j].idProducto,nombre:productos[j].nombre,cantidad:productosEnCarro[productos[j].idProducto]};
+            var obj = {idProducto: productos[j].idProducto,nombre:productos[j].nombre,cantidad:productosEnCarro[productos[j].idProducto],imagen:productos[j].imagen};
             totales.push(obj);
         }    
     }
