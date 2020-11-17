@@ -1,3 +1,4 @@
+var totales=new Array();
 $(document).ready(function(){
     cargarProductosEnCompra();
 })
@@ -21,7 +22,6 @@ function cargarProductosEnCompra(){
 
 function organizarCarro(productos){
     var productosEnCarro=getCookies();
-    var totales=new Array();
     for (let i = 0; i < productosEnCarro.length; i++) {
         for (let j = 0; j < productos.length; j++) {
             if(productosEnCarro[i].hasOwnProperty(productos[i].idProducto)){
