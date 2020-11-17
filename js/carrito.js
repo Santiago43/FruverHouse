@@ -1,4 +1,5 @@
 var totales=new Array();
+var productos;
 $(document).ready(function(){
     cargarProductosEnCompra();
 })
@@ -9,6 +10,7 @@ function cargarProductosEnCompra(){
         url: direccion+'/producto.py',
         dataType: "json",
         success: function(response) {
+            productos=response;
             organizarCarro(response);
         },
         error: function(response){
