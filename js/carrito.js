@@ -54,7 +54,8 @@ function pintarProductosAComprar(totales){
         txt+='<img src="'+totales[i].imagen+'"></div>'
         txt+='<div class="middle aligned content">'
         txt+='<a class="header">'+totales[i].nombre+'</a>'
-        txt+='<button class="ui red button">Eliminar</button></div></div>'
+        txt+='</div>'
+        txt+='<div class="right aligned content"><button class="ui red button">Eliminar</button></div></div>'
         $(".ui.items").append(txt);       
     }
 }  
