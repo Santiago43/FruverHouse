@@ -12,7 +12,7 @@ function cargarProductosEnCompra(){
         dataType: "json",
         success: function(response) {
             productos=response;
-            organizarCarro(response);
+            organizarCarro(productos);
         },
         error: function(response){
             console.log("Error al obtener producto")
@@ -27,7 +27,7 @@ function organizarCarro(productos){
     productosEnCarro=getCookies();
     for (let j = 0; j < productos.length; j++) {
         if(productosEnCarro.hasOwnProperty(productos[j].idProducto)){
-            var obj = {idProducto: productos[j].idProducto,nombre:productos[j].nombre,cantidad:productosEnCarro[productos[j].idProducto],imagen:productos[j].imagen};
+            var obj = {idProducto: productos[j].idProducto,nombre:productos[j].nombre,cantidad:productosEnCarro[productos[j].idProducto],imagen:productos[j].imagen,unidad:productos[j].unidad};
             totales.push(obj);
         }    
     }
@@ -53,8 +53,8 @@ function pintarProductosAComprar(totales){
         txt+='<div class="ui tiny image">'
         txt+='<img src="'+totales[i].imagen+'"></div>'
         txt+='<div class="middle aligned content">'
-        txt+='<a class="header">'+totales[i].nombre+'</a>'
-        txt+='</div>'
+        txt+='<a class="header">'+totales[i].nombre+'</a></div>'
+        txt+='unidades: '+totales[i].cantidad+' '+totales[i].unidad+'(s)';
         txt+='<div class="right aligned content"><button class="ui red button">Eliminar</button></div></div>'
         $(".ui.items").append(txt);       
     }
