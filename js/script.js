@@ -361,7 +361,7 @@ var app = new Vue({
       logged:logged
     },
     methods: {
-       mounted: function(){
+        mounted(){
            let user = getCookie("usuario")
            let payload ={"data":productosACompra,"user":user}
            if (user===null){

@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="ui simple dropdown item">
-                    Productos <i class="dropdown icon"></i>
+                    
                     <div class="green menu">
                         <a class="item" href="producto.html">Conoce nuestros productos</a>
                     </div>
@@ -38,12 +38,21 @@
                             </div>
                           </div>
                     </div>
-                    <div class="ui simple dropdown item">
-                        <div v-show="logged">{{user.primerNombre}}
-                            <a v-on:click="cerrarSesion" class="item">Cerrar Sesión</a>
+                    
+                    <div v-show="logged">
+                        <div class="ui simple dropdown item">
+                            {{user.primerNombre}} <i class="dropdown icon"></i>
+                            <div class="ui green menu">
+                                <a v-on:click="cerrarSesion" class="item">Cerrar Sesión</a>
+                            </div>
                         </div>
-                        <div v-show="!logged" class="ui orange button"><a href="index.html">Ingresa</a></div>
                     </div>
+                    <div v-show="!logged">
+                        <div class="ui orange button">
+                            <a href="index.html">Ingresa</a>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
