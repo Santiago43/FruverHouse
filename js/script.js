@@ -364,7 +364,7 @@ var app = new Vue({
     methods: {
         mounted(){
            let user = getCookie("usuario")
-           let payload ={"data":productosACompra,"user":user}
+           let payload ={"user":user}
            if (user===null){
                 this.logged=false; 
            }else{
@@ -381,6 +381,9 @@ var app = new Vue({
        cerrarSesion: function(){
             delete_cookie("usuario")
             this.logged=false;
+       },
+       carrito:function(){
+           window.location.assign("carrito.html")
        }
     }
 
