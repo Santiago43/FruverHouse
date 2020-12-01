@@ -350,7 +350,8 @@ function cargarSelectProd(productos){
 }
 
 $("#carrito").click(function(){
-    window.location.assign("carrito.html");
+    $(location).attr('href','carrito.html');
+    console.log("Hola")
 });
 
 var logged=getCookie("usuario")!==null;
