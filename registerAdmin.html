@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/semantic.min.css">
+    <title>Registro - Fruver House</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<body>
+   
+    <div class="ui grid">
+        <div class="ui row">
+            <div class="ui seven wide column">
+
+            </div>
+            <h1>Regístrate</h1>
+        </div>
+        <div class="ui row">
+            <div class="ui three wide column">
+
+            </div>
+            <div class="ui ten wide column">
+                <form class="ui form" action="/" method="post">
+                    Seleccione el tipo de documento
+                    <select name="tipoDocumento" id="tipoDocumento">
+                    <option value=""></option>
+                      <option value="1">Cédula</option>
+                      <option value="2">Tarjeta de identidad</option>
+                      <option value="3">Cédula de extranjería</option>
+                      <option value="4">Pasaporte</option>
+                    </select>
+                    Identificación: <input type="number" name="cedula" id="cedula">
+                    Primer nombre: <input type="text" name="nombre1" id="n1">
+                    Segundo nombre: <input type="text" name="nombre2" id="n2">
+                    Primer appellido: <input type="text" name="apellido1" id="a1">
+                    Segundo appellido: <input type="text" name="apellido2" id="a2">
+                    Correo: <input type="text" name="email" id="email">
+                    Confirme correo: <input type="text" name="emailc" id="emailc">
+                    Ingrese su contraseña: <input type="password" name="pass" id="pass">
+                    Confirme su contraseña: <input type="password" name="passc" id="passc">
+                    Teléfono: <input type="number" name="telefono" id="telefono">
+                    Dirección de residencia: <input type="text" name="direccion" id="direccion">
+                    Permisos: <input type="number" name="permisos" id="permisos">
+                    <input class="ui yellow button " id="btnRegistrarAdmin" type="submit" value="Registrar">
+                </form>
+            </div>
+            <div class="ui three wide column">
+    
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script type="text/javascript" src="js/semantic.min.js"></script>
+<script type="text/javascript" src="js/register.js"></script>
+<script src="js/script.js"></script>
+</html>
