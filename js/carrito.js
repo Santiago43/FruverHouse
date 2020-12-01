@@ -68,10 +68,9 @@ var app = new Vue({
      },
      methods: {
         compra: function(){
-            this.productos=totales
             var productosACompra=new Array();
-            for (let i = 0; i < this.productos.length; i++) {
-                let productoEnCompra= {idProducto:productos[i].idProducto,cantidad:productos[i].cantidad};
+            for (let i = 0; i < this.totales.length; i++) {
+                let productoEnCompra= {idProducto:totales[i].idProducto,cantidad:totales[i].cantidad};
                 productosACompra.push(productoEnCompra);
             }
             axios.post(direccionFlask,productosACompra)
