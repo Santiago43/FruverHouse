@@ -11,66 +11,64 @@
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <body>
-    <div id="car">
-        <div id="app" class="ui grid">
-            <div class="ui row">
-              <div class="ui inverted massive green fixed menu">
-                <div class="menu">
-                    <label class="item fruverHouse">FruverHouse</label> 
+    <div id="app" class="ui grid">
+        <div class="ui row">
+            <div class="ui inverted massive green fixed menu">
+            <div class="menu">
+                <label class="item fruverHouse">FruverHouse</label> 
+            </div>
+            <div class="ui simple dropdown item">
+                Categorias <i class="dropdown icon"></i>
+                <div class="green menu">
+                    <a class="item" href="categoria.html">Conoce nuestras categorias</a>
                 </div>
-                <div class="ui simple dropdown item">
-                    Categorias <i class="dropdown icon"></i>
-                    <div class="green menu">
-                        <a class="item" href="categoria.html">Conoce nuestras categorias</a>
-                    </div>
+            </div>
+            <div class="ui simple dropdown item">
+                Productos <i class="dropdown icon"></i>
+                <div class="green menu">
+                    <a class="item" href="producto.html">Conoce nuestros productos</a>
                 </div>
-                <div class="ui simple dropdown item">
-                    Productos <i class="dropdown icon"></i>
-                    <div class="green menu">
-                        <a class="item" href="producto.html">Conoce nuestros productos</a>
-                    </div>
-                </div>
-                <div class="right menu">
-                    <div class="item">
-                        <div id="carrito" class="ui vertical animated inverted orange button" tabindex="0">
-                            <div class="hidden content">Carrito</div>
-                            <div class="visible content">
-                              <i class="shop icon"></i>
-                            </div>
+            </div>
+            <div class="right menu">
+                <div class="item">
+                    <div id="carrito" class="ui vertical animated inverted orange button" tabindex="0">
+                        <div class="hidden content">Carrito</div>
+                        <div class="visible content">
+                            <i class="shop icon"></i>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="ui orange button">Regístrate</div>
-                    </div>
+                </div>
+                <div class="item">
+                    <div class="ui orange button">Regístrate</div>
                 </div>
             </div>
-      
-            </div>
-              
-              <div class="row">
-                  <div class="one wide column">
-      
-                  </div>
-                  <div id="contenido" class="ui olive fourteen wide column">
-                      <div class="ui divided items">
-                          
-                      </div>
-                      <div class="ui item">
-                          <div class="right aligned content">
-                              <button id="compra" v-on:click="compra" class="ui orange button">Realizar Compra</button>
-                          </div>
-                      </div>
-
-                      <input type="text" name="direccionDestino" id="direccionDestino" placeholder="dirección de destino a la que quiere que llegue el domicilio">
-                  </div>
-                  
-                  <div class="ui one wide column">
-      
-                  </div>
-              </div>
-          </div>
-    </div>
+        </div>
     
+        </div>
+            
+        <div class="row">
+            <div class="one wide column">
+
+            </div>
+            <div id="contenido" class="ui olive fourteen wide column">
+                <div class="ui divided items">
+                    
+                </div>
+                <div class="ui item">
+                    <div class="right aligned content">
+                        <button id="compra" v-on:click="compra" class="ui orange button">Realizar Compra</button>
+                    </div>
+                </div>
+
+                <input type="text" name="direccionDestino" id="direccionDestino" placeholder="dirección de destino a la que quiere que llegue el domicilio">
+            </div>
+            
+            <div class="ui one wide column">
+
+            </div>
+        </div>
+    </div>
+
 </body>
 <script src="js/semantic.min.js"></script>
 <script src="js/script.js"></script>

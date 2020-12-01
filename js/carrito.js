@@ -60,31 +60,3 @@ function pintarProductosAComprar(totales){
 }  
 
 
-
-var app2 = new Vue({
-     el: '#car',
-     data: {
-       productos:totales
-     },
-     methods: {
-        compra: function(){
-            var productosACompra=new Array();
-            console.log(this.productos)
-            for (let i = 0; i < this.productos.length; i++) {
-                let productoEnCompra= {idProducto:this.productos[i].idProducto,cantidad:this.productos[i].cantidad};
-                productosACompra.push(productoEnCompra);
-            }
-            var direccion = document.getElementById("#direccionDestino")
-            var txtDireccion = direccion.innerHTML;
-            let user = getCookie("usuario")
-            let payload ={"data":productosACompra,"user":user,"direccion":txtDireccion};
-            axios.post(direccionFlask+"/compra",payload)
-            .then(response => {
-                const data = response.data;
-                console.log("Compra realizada. Un domiciliario tomará el pedido",data);
-            })
-            .catch(error => console.error(error));
-        },
-     }
-
-})
