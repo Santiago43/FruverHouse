@@ -62,7 +62,7 @@ function pintarProductosAComprar(totales){
 
 
 var app = new Vue({
-     el: '#app',
+     el: '#car',
      data: {
        productos:totales
      },
@@ -74,8 +74,10 @@ var app = new Vue({
                 let productoEnCompra= {idProducto:this.productos[i].idProducto,cantidad:this.productos[i].cantidad};
                 productosACompra.push(productoEnCompra);
             }
+            var direccion = document.getElementById("#direccionDestino")
+            var txtDireccion = direccion.innerHTML;
             let user = getCookie("usuario")
-            let payload ={"data":productosACompra,"user":user}
+            let payload ={"data":productosACompra,"user":user,"direccion":txtDireccion};
             axios.post(direccionFlask+"/compra",payload)
             .then(response => {
                 const data = response.data;

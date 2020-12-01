@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/semantic.min.css">
     <link rel="stylesheet" href="css/storeStyles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Categorias</title>
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <body>
-    <div class="ui grid">
+    <div id="app" class="ui grid">
         <div class="ui row">
             <div class="ui inverted massive green fixed menu">
                 <div class="menu">
@@ -36,8 +38,11 @@
                             </div>
                           </div>
                     </div>
-                    <div class="item">
-                        <div class="ui orange button">Regístrate</div>
+                    <div class="ui simple dropdown item">
+                        <div v-show="logged">{{user.primerNombre}}
+                            <a v-on:click="cerrarSesion" class="item">Cerrar Sesión</a>
+                        </div>
+                        <div v-show="!logged" class="ui orange button"><a href="index.html">Ingresa</a></div>
                     </div>
                 </div>
             </div>

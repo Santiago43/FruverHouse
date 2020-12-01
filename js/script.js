@@ -352,3 +352,35 @@ function cargarSelectProd(productos){
 $("#carrito").click(function(){
     $(location).attr('href','carrito.html')
 });
+
+
+var app = new Vue({
+    el: '#app',
+    data: {
+      user:{},
+      logged:false
+    },
+    methods: {
+       mounted: function(){
+           let user = getCookie("usuario")
+           let payload ={"data":productosACompra,"user":user}
+           if (user===null){
+                this.logged=false; 
+           }else{
+               this.logged=true;
+           }
+           axios.post(direccionFlask+"/user",payload)
+           .then(response => {
+               const data = response.data; 
+               user = data.usuario;
+               console.log("Usuario: ",data.usuario);
+           })
+           .catch(error => console.error(error));
+       },
+       cerrarSesion: function(){
+            delete_cookie("usuario")
+            this.logged=false;
+       }
+    }
+
+})
