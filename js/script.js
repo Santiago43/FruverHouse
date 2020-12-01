@@ -1,6 +1,6 @@
 //import 'client.js'
 var direccion="/cgi-bin/FruverHouseBack";
-var direccionFlask='http://54.85.11.168:5000/compra';
+var direccionFlask='http://52.90.193.35:5000';
 
 function getCookie(cname) {
     var name = cname + "=";

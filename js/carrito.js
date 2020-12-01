@@ -75,7 +75,7 @@ var app = new Vue({
                 productosACompra.push(productoEnCompra);
             }
             let payload ={"data":productosACompra}
-            axios.post(direccionFlask,payload)
+            axios.post(direccionFlask+"/compra",payload)
             .then(response => {
                 const data = response.data;
                 console.log("Compra realizada. Un domiciliario tomará el pedido",data);
