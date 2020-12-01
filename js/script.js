@@ -351,11 +351,7 @@ function cargarSelectProd(productos){
     }
 }
 
-$("#carrito").click(function(){
-    $(location).attr('href','carrito.html');
-    console.log("Hola")
-});
-
+var direccion = document.getElementById("#direccionDestino")
 var logged=getCookie("usuario")!==null;
 var app = new Vue({
     el: '#app',
@@ -395,7 +391,6 @@ var app = new Vue({
             let productoEnCompra= {idProducto:this.productos[i].idProducto,cantidad:this.productos[i].cantidad};
             productosACompra.push(productoEnCompra);
         }
-        var direccion = document.getElementById("#direccionDestino")
         var txtDireccion = direccion.innerHTML;
         let user = getCookie("usuario")
         let payload ={"data":productosACompra,"user":user,"direccion":txtDireccion};

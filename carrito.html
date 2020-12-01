@@ -38,8 +38,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="ui orange button">Regístrate</div>
+                <div v-show="logged">
+                    <div class="ui simple dropdown item">
+                        {{user.primerNombre}} <i class="dropdown icon"></i>
+                        <div class="ui orange menu">
+                            <button v-on:click="cerrarSesion" class="item">Cerrar Sesión</button>
+                        </div>
+                    </div>
+                </div>
+                <div v-show="!logged">
+                    <div class="ui item">
+                        <div class="ui orange button">
+                            <a href="index.html">Ingresa</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
