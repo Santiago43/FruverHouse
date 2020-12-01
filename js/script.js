@@ -74,7 +74,7 @@ function loginUsuario(obj){
         success: function(rta) {
             response=JSON.parse(rta);
             if(response.tipo==="OK"){
-                setCookie("usuario",rta.usuario.documento,0.3);
+                setCookie("usuario",response.usuario.documento,0.3);
                 alert("Mensaje: "+response.mensaje)
                 $(location).attr('href','/FruverHouse/categoria.html')
             }
