@@ -31,7 +31,7 @@
                 </div>
                 <div class="right menu">
                     <div class="item" data-tooltip="" data-inverted="">
-                        <div id="carrito" class="ui vertical animated inverted orange button" tabindex="0" >
+                        <div id="carrito" v-on:click="carrito" class="ui vertical animated inverted orange button" tabindex="0" >
                             <div class="hidden content" >Carrito</div>
                             <div class="visible content">
                               <i class="shop icon"></i>
@@ -42,14 +42,16 @@
                     <div v-show="logged">
                         <div class="ui simple dropdown item">
                             {{user.primerNombre}} <i class="dropdown icon"></i>
-                            <div class="ui green menu">
-                                <a v-on:click="cerrarSesion" class="item">Cerrar Sesión</a>
+                            <div class="ui orange menu">
+                                <button v-on:click="cerrarSesion" class="item">Cerrar Sesión</button>
                             </div>
                         </div>
                     </div>
                     <div v-show="!logged">
-                        <div class="ui orange button">
-                            <a href="index.html">Ingresa</a>
+                        <div class="ui item">
+                            <div class="ui orange button">
+                                <a href="index.html">Ingresa</a>
+                            </div>
                         </div>
                     </div>
                     
