@@ -350,5 +350,4 @@ function cargarSelectProd(productos){
 
 $("#carrito").click(function(){
     $(location).attr('href','carrito.html')
-
 });

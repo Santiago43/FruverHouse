@@ -64,7 +64,7 @@ function pintarProductosAComprar(totales){
 var app = new Vue({
      el: '#app',
      data: {
-       productos=totales
+       productos:totales
      },
      methods: {
         compra: function(){
