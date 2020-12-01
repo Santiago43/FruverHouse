@@ -64,10 +64,11 @@ function pintarProductosAComprar(totales){
 var app = new Vue({
      el: '#app',
      data: {
-       productos:totales
+       productos:[]
      },
      methods: {
         compra: function(){
+            this.productos=totales
             var productosACompra=new Array();
             for (let i = 0; i < this.productos.length; i++) {
                 let productoEnCompra= {idProducto:productos[i].idProducto,cantidad:productos[i].cantidad};
