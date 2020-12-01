@@ -74,7 +74,8 @@ var app = new Vue({
                 let productoEnCompra= {idProducto:this.productos[i].idProducto,cantidad:this.productos[i].cantidad};
                 productosACompra.push(productoEnCompra);
             }
-            let payload ={"data":productosACompra}
+            let user = getCookie("usuario")
+            let payload ={"data":productosACompra,"user":user}
             axios.post(direccionFlask+"/compra",payload)
             .then(response => {
                 const data = response.data;
