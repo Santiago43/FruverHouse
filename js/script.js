@@ -1,5 +1,6 @@
 //import 'client.js'
 var direccion="/cgi-bin/FruverHouseBack";
+var direccionFlask='http://54.85.11.168:5000/compra';
 
 function getCookie(cname) {
     var name = cname + "=";
@@ -22,6 +23,10 @@ function setCookie(cname, cvalue, exdays) {
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function delete_cookie(name) {
+    document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
   }
 /**
  * 
