@@ -1,4 +1,6 @@
-import 'carrito.js'
+var totales=new Array();
+var productos;
+var productosEnCarro;
 var direccion="/cgi-bin/FruverHouseBack";
 var direccionFlask='http://52.90.193.35:5000';
 

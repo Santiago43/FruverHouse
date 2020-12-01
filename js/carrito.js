@@ -1,6 +1,3 @@
-var totales=new Array();
-var productos;
-var productosEnCarro;
 $(document).ready(function(){
     cargarProductosEnCompra();
 })
