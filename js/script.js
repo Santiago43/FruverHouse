@@ -353,12 +353,12 @@ $("#carrito").click(function(){
     $(location).attr('href','carrito.html')
 });
 
-
+var logged=getCookie("usuario")!==null;
 var app = new Vue({
     el: '#app',
     data: {
       user:{},
-      logged:false
+      logged:logged
     },
     methods: {
        mounted: function(){
