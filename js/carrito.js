@@ -69,6 +69,7 @@ var app = new Vue({
      methods: {
         compra: function(){
             var productosACompra=new Array();
+            console.log(this.productos)
             for (let i = 0; i < this.productos.length; i++) {
                 let productoEnCompra= {idProducto:this.productos[i].idProducto,cantidad:this.productos[i].cantidad};
                 productosACompra.push(productoEnCompra);
