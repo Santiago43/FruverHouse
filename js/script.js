@@ -359,7 +359,8 @@ var app = new Vue({
     el: '#app',
     data: {
       user:{},
-      logged:logged
+      logged:logged,
+      productos:totales
     },
     methods: {
         mounted(){
