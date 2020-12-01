@@ -64,13 +64,13 @@ function pintarProductosAComprar(totales){
 var app = new Vue({
      el: '#app',
      data: {
-       productos:[]
+       productos:totales
      },
      methods: {
         compra: function(){
             var productosACompra=new Array();
-            for (let i = 0; i < this.totales.length; i++) {
-                let productoEnCompra= {idProducto:totales[i].idProducto,cantidad:totales[i].cantidad};
+            for (let i = 0; i < this.productos.length; i++) {
+                let productoEnCompra= {idProducto:this.productos[i].idProducto,cantidad:this.productos[i].cantidad};
                 productosACompra.push(productoEnCompra);
             }
             axios.post(direccionFlask,productosACompra)
