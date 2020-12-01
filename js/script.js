@@ -351,7 +351,7 @@ function cargarSelectProd(productos){
     }
 }
 
-var direccion = document.getElementById("#direccionDestino")
+var direccionDestino = document.getElementById("#direccionDestino")
 var logged=getCookie("usuario")!==null;
 var app = new Vue({
     el: '#app',
