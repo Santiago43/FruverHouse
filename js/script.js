@@ -67,6 +67,52 @@ function registrarUsuario(obj){
 
 }
 
+function registrarAdmin(obj){
+    $.ajax({
+        method: 'POST',
+        url: direccion+'/registerAdmin.py',
+        data: obj,
+        dataType: "json",
+        success: function(rta) {
+            response=JSON.parse(rta);
+            if(response.tipo==="OK"){
+                alert("Mensaje: "+response.mensaje)
+                $(location).attr('href','/FruverHouse/index.html')
+            }
+            else{
+                alert("Error: "+response.mensaje)
+            }
+        },
+        error: function(response){
+            console.log(JSON.stringify(response))
+        }
+    }); 
+
+}
+
+function registrarDomi(obj){
+    $.ajax({
+        method: 'POST',
+        url: direccion+'/registerDomi.py',
+        data: obj,
+        dataType: "json",
+        success: function(rta) {
+            response=JSON.parse(rta);
+            if(response.tipo==="OK"){
+                alert("Mensaje: "+response.mensaje)
+                $(location).attr('href','/FruverHouse/index.html')
+            }
+            else{
+                alert("Error: "+response.mensaje)
+            }
+        },
+        error: function(response){
+            console.log(JSON.stringify(response))
+        }
+    }); 
+
+}
+
 function loginUsuario(obj){
     $.ajax({
         method: 'POST',
