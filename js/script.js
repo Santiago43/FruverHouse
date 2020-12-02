@@ -432,6 +432,10 @@ var app = new Vue({
         .then(response => {
             const data = response.data;
             alert(data.mensaje);
+            if (data.status==="success"){
+                window.location.assign("index.html")
+            }
+            
         })
         .catch(error => console.error(error));
     },
