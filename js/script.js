@@ -351,7 +351,7 @@ function cargarSelectProd(productos){
     }
 }
 
-var direccionDestino = document.getElementById("#direccionDestino")
+
 var logged=getCookie("usuario")!==null;
 var app = new Vue({
     el: '#app',
@@ -391,13 +391,14 @@ var app = new Vue({
             let productoEnCompra= {idProducto:this.productos[i].idProducto,cantidad:this.productos[i].cantidad};
             productosACompra.push(productoEnCompra);
         }
-        var txtDireccion = direccion.innerHTML;
+        var direccionDestino = document.getElementById("#direccionDestino")
+        var txtDireccion = direccionDestino.innerHTML;
         let user = getCookie("usuario")
         let payload ={"data":productosACompra,"user":user,"direccion":txtDireccion};
         axios.post(direccionFlask+"/compra",payload)
         .then(response => {
             const data = response.data;
-            console.log("Compra realizada. Un domiciliario tomará el pedido",data);
+            console.log(data.mensaje);
         })
         .catch(error => console.error(error));
     },
