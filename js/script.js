@@ -461,6 +461,7 @@ var app = new Vue({
                             contra:this.admin.pass,
                             documento:this.admin.cedula,
                             tipoDocumento:this.admin.tipoDocumento,
+                            direccion:this.admin.direccion,
                             permisos:permisosAAsignar
                         }
                         axios.post(direccionFlask+"/admin",payload)
