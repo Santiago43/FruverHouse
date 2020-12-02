@@ -520,14 +520,15 @@ var app = new Vue({
              this.logged=false; 
         }else{
             this.logged=true;
-        }
-        axios.get(direccionFlask+"/user/"+user)
-        .then(response => {
+            axios.get(direccionFlask+"/user/"+user)
+            .then(response => {
             const data = response.data; 
             this.usuario = data.usuario;
             console.log("Usuario: ",data.usuario);
-        })
-        .catch(error => console.error(error));
+            })
+            .catch(error => console.error(error));
+        }
+        
         if(document.title==="Registro Administrador- Fruver House"){
             axios.get(direccionFlask+"/permisos")
             .then(response => {
