@@ -441,7 +441,7 @@ var app = new Vue({
         }else{
             this.logged=true;
         }
-        axios.post(direccionFlask+"/user",payload)
+        axios.get(direccionFlask+"/user",payload)
         .then(response => {
             const data = response.data; 
             user = data.usuario;
@@ -459,3 +459,4 @@ var app = new Vue({
     }
 
 })
+app.beforeMount()
