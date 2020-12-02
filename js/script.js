@@ -406,7 +406,8 @@ var app = new Vue({
       logged:logged,
       productos:totales,
       direccionDestino: direccionDestino,
-      admin:{}
+      admin:{},
+      permisos:[]
     },
     methods: {
        cerrarSesion: function(){
@@ -432,7 +433,7 @@ var app = new Vue({
         })
         .catch(error => console.error(error));
     },
-    beforeMount(){
+    beforeMount:function(){
         let user = getCookie("usuario")
         let payload ={"user":user}
         if (user===null){
@@ -447,6 +448,13 @@ var app = new Vue({
             console.log("Usuario: ",data.usuario);
         })
         .catch(error => console.error(error));
+        if(document.title==="Registro Administrador- Fruver House"){
+            axios.get(direccionFlask+"/permisos")
+            .then(response => {
+            this.permisos=response.data
+            console.log(permisos);
+        })
+        }
     },
     }
 
