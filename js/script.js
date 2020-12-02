@@ -485,7 +485,8 @@ var app = new Vue({
         if(document.title==="Registro Administrador- Fruver House"){
             axios.get(direccionFlask+"/permisos")
             .then(response => {
-            this.permisos=response.data
+            var obj=response.data;
+            this.permisos=obj.permisos;
             console.log(this.permisos);
         })
         }
