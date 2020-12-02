@@ -405,25 +405,10 @@ var app = new Vue({
       user:{},
       logged:logged,
       productos:totales,
-      direccionDestino: direccionDestino
+      direccionDestino: direccionDestino,
+      admin:{}
     },
     methods: {
-        mounted(){
-           let user = getCookie("usuario")
-           let payload ={"user":user}
-           if (user===null){
-                this.logged=false; 
-           }else{
-               this.logged=true;
-           }
-           axios.post(direccionFlask+"/user",payload)
-           .then(response => {
-               const data = response.data; 
-               user = data.usuario;
-               console.log("Usuario: ",data.usuario);
-           })
-           .catch(error => console.error(error));
-       },
        cerrarSesion: function(){
             delete_cookie("usuario")
             this.logged=false;
@@ -444,6 +429,22 @@ var app = new Vue({
         .then(response => {
             const data = response.data;
             alert(data.mensaje);
+        })
+        .catch(error => console.error(error));
+    },
+    mounted(){
+        let user = getCookie("usuario")
+        let payload ={"user":user}
+        if (user===null){
+             this.logged=false; 
+        }else{
+            this.logged=true;
+        }
+        axios.post(direccionFlask+"/user",payload)
+        .then(response => {
+            const data = response.data; 
+            user = data.usuario;
+            console.log("Usuario: ",data.usuario);
         })
         .catch(error => console.error(error));
     },

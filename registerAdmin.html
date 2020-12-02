@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="css/semantic.min.css">
     <title>Registro - Fruver House</title>
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <body>
    
-    <div class="ui grid">
+    <div id="app" class="ui grid">
         <div class="ui row">
             <div class="ui seven wide column">
 
@@ -21,7 +24,7 @@
 
             </div>
             <div class="ui ten wide column">
-                <form class="ui form" action="/" method="post">
+                <form class="ui form" method="post">
                     Seleccione el tipo de documento
                     <select name="tipoDocumento" id="tipoDocumento">
                     <option value=""></option>
@@ -30,18 +33,20 @@
                       <option value="3">Cédula de extranjería</option>
                       <option value="4">Pasaporte</option>
                     </select>
-                    Identificación: <input type="number" name="cedula" id="cedula">
-                    Primer nombre: <input type="text" name="nombre1" id="n1">
-                    Segundo nombre: <input type="text" name="nombre2" id="n2">
-                    Primer appellido: <input type="text" name="apellido1" id="a1">
-                    Segundo appellido: <input type="text" name="apellido2" id="a2">
-                    Correo: <input type="text" name="email" id="email">
-                    Confirme correo: <input type="text" name="emailc" id="emailc">
-                    Ingrese su contraseña: <input type="password" name="pass" id="pass">
-                    Confirme su contraseña: <input type="password" name="passc" id="passc">
-                    Teléfono: <input type="number" name="telefono" id="telefono">
-                    Dirección de residencia: <input type="text" name="direccion" id="direccion">
-                    Permisos: <input type="number" name="permisos" id="permisos">
+                    Identificación: <input v-model="admin.cedula" type="number" name="cedula" id="cedula">
+                    Primer nombre: <input v-model="admin.n1" type="text" name="nombre1" id="n1">
+                    Segundo nombre: <input v-model="admin.n2" type="text" name="nombre2" id="n2">
+                    Primer appellido: <input v-model="admin.a1" type="text" name="apellido1" id="a1">
+                    Segundo appellido: <input v-model="admin.a2" type="text" name="apellido2" id="a2">
+                    Correo: <input v-model="admin.n1"type="text" name="email" id="email">
+                    Confirme correo: <input v-model="admin.emailc" type="text" name="emailc" id="emailc">
+                    Ingrese su contraseña: <input v-model="admin.pass" type="password" name="pass" id="pass">
+                    Confirme su contraseña: <input v-model="admin.passc"type="password" name="passc" id="passc">
+                    Teléfono: <input v-model="admin.telefono" type="number" name="telefono" id="telefono">
+                    Dirección de residencia: <input v-model="admin.direccion" type="text" name="direccion" id="direccion">
+                    Permisos: <ul>
+                        <li v-for= "p in permisos">{{p.nombre}} <input type="checkbox" name="" v-bind:id="p.idPermiso"></li>
+                    </ul>
                     <input class="ui yellow button " id="btnRegistrarAdmin" type="submit" value="Registrar">
                 </form>
             </div>
