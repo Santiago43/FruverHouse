@@ -420,7 +420,7 @@ function cargarSelectProd(productos){
         $("#idProducto").append(txt);
     }
 }
-
+var checkboxes=[];
 var direccionDestino="";
 var logged=getCookie("usuario")!==null;
 var app = new Vue({
@@ -441,15 +441,38 @@ var app = new Vue({
                     alert("Los correos no coinciden");
                 }
                 else {
-                    if (password!==passwordC){
+                    if (admin.password!==admin.passwordC){
                         alert("Las contraseñas no coinciden");
                     }else{
-                        if (!check){
-                            alert("Debe aceptar las políticas de tratamiento de datos");
-                        }else{
-                            var checkboxes = document.getElementsByClassName("el_permiso");
-                            registrarDomi(obj);
+                        checkboxes = document.getElementsByClassName("el_permiso");
+                        var permisosAAsignar=new Array()
+                        for (let i = 0; i < checkboxes.length; i++) {
+                            if(checkboxes[i].checked){
+                                this.permisosAAsignar.push(checkboxes[i].id);
+                            }
                         }
+                        var payload ={
+                            n1:admin.n1,
+                            n2:admin.n2,
+                            a1:admin.a1,
+                            a2:admin.a2,
+                            email:admin.email,
+                            telefono:admin.telefono,
+                            contra:admin.contraseña,
+                            documento:admin.documento,
+                            tipoDocumento:admin.tipoDocumento,
+                            permisos:permisosAAsignar
+                        }
+                        axios.post(direccionFlask+"/admin",payload)
+                        .then(response => {
+                            const data = response.data;
+                            alert(data.mensaje);
+                            if (data.tipo==="OK"){
+                                window.location.assign("index.html")
+                            }
+            
+        })
+        .catch(error => console.error(error));
                     }
                 } 
             }else{
