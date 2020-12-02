@@ -459,7 +459,7 @@ var app = new Vue({
                             email:this.admin.email,
                             telefono:this.admin.telefono,
                             contra:this.admin.pass,
-                            documento:this.admin.documento,
+                            documento:this.admin.cedula,
                             tipoDocumento:this.admin.tipoDocumento,
                             permisos:permisosAAsignar
                         }
