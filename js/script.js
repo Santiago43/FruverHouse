@@ -435,6 +435,28 @@ var app = new Vue({
       permisos:[]
     },
     methods: {
+        registrarAdmin:function(){
+            if (validarEmail(admin.email)){
+                if(admin.email!==admin.emailc){
+                    alert("Los correos no coinciden");
+                }
+                else {
+                    if (password!==passwordC){
+                        alert("Las contraseñas no coinciden");
+                    }else{
+                        if (!check){
+                            alert("Debe aceptar las políticas de tratamiento de datos");
+                        }else{
+                            var checkboxes = document.getElementsByClassName("el_permiso");
+                            registrarDomi(obj);
+                        }
+                    }
+                } 
+            }else{
+                alert("Correo en formato incorrecto");
+            }
+            
+        },
        cerrarSesion: function(){
             deleteAllCookies();
             delete_cookie("usuario");

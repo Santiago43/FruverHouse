@@ -24,7 +24,7 @@
 
             </div>
             <div class="ui ten wide column">
-                <form class="ui form" method="post">
+                <form v-on:submit.prevent="registrarAdmin" class="ui form" method="post">
                     Seleccione el tipo de documento
                     <select name="tipoDocumento" id="tipoDocumento">
                     <option value=""></option>
@@ -45,9 +45,9 @@
                     Teléfono: <input v-model="admin.telefono" type="number" name="telefono" id="telefono">
                     Dirección de residencia: <input v-model="admin.direccion" type="text" name="direccion" id="direccion">
                     Permisos: <ul>
-                        <li v-for= "p in permisos">{{p.nombrePermiso}} <input type="checkbox" name="" v-bind:id="p.idPermiso"></li>
+                        <li v-for= "p in permisos">{{p.nombrePermiso}} <input class="el_permiso" type="checkbox" v-bind:id="p.idPermiso"></li>
                     </ul>
-                    <input class="ui yellow button " id="btnRegistrarAdmin" type="submit" value="Registrar">
+                    <input v-on:click="registrarAdmin" class="ui yellow button " id="btnRegistrarAdmin" type="submit" value="Registrar">
                 </form>
             </div>
             <div class="ui three wide column">
