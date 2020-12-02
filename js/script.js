@@ -414,6 +414,7 @@ var app = new Vue({
        cerrarSesion: function(){
             delete_cookie("usuario")
             this.logged=false;
+            this.usuario={}
        },
        carrito:function(){
            window.location.assign("carrito.html")
