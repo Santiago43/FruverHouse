@@ -443,7 +443,7 @@ var app = new Vue({
         axios.post(direccionFlask+"/compra",payload)
         .then(response => {
             const data = response.data;
-            console.log(data.mensaje);
+            alert(data.mensaje);
         })
         .catch(error => console.error(error));
     },
