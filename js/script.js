@@ -432,7 +432,7 @@ var app = new Vue({
         })
         .catch(error => console.error(error));
     },
-    mounted(){
+    beforeMount(){
         let user = getCookie("usuario")
         let payload ={"user":user}
         if (user===null){
