@@ -391,7 +391,7 @@ var app = new Vue({
             let productoEnCompra= {idProducto:this.productos[i].idProducto,cantidad:this.productos[i].cantidad};
             productosACompra.push(productoEnCompra);
         }
-        var direccionDestino = document.getElementById("#direccionDestino")
+        var direccionDestino = document.getElementById("direccionDestino")
         var txtDireccion = direccionDestino.innerHTML;
         let user = getCookie("usuario")
         let payload ={"data":productosACompra,"user":user,"direccion":txtDireccion};
