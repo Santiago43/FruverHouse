@@ -527,7 +527,7 @@ var app = new Vue({
             console.log("Usuario: ",data.usuario);
         })
         .catch(error => console.error(error));
-        if(document.title==="Registro this.Administrador- Fruver House"){
+        if(document.title==="Registro Administrador- Fruver House"){
             axios.get(direccionFlask+"/permisos")
             .then(response => {
             var obj=response.data;
