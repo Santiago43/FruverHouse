@@ -437,7 +437,7 @@ var app = new Vue({
     methods: {
        cerrarSesion: function(){
             deleteAllCookies();
-            delete_cookie("usuario")
+            delete_cookie("usuario");
             this.logged=false;
             this.usuario={}
             window.location.assign("index.html")
