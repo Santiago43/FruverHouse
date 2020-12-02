@@ -435,13 +435,12 @@ var app = new Vue({
     },
     beforeMount:function(){
         let user = getCookie("usuario")
-        let payload ={"user":user}
         if (user===null){
              this.logged=false; 
         }else{
             this.logged=true;
         }
-        axios.get(direccionFlask+"/user",payload)
+        axios.get(direccionFlask+"/user/"+user)
         .then(response => {
             const data = response.data; 
             user = data.usuario;
