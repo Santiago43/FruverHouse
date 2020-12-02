@@ -403,6 +403,7 @@ var app = new Vue({
     el: '#app',
     data: {
       user:{},
+      usuario:{},
       logged:logged,
       productos:totales,
       direccionDestino: direccionDestino,
@@ -443,7 +444,7 @@ var app = new Vue({
         axios.get(direccionFlask+"/user/"+user)
         .then(response => {
             const data = response.data; 
-            user = data.usuario;
+            this.usuario = data.usuario;
             console.log("Usuario: ",data.usuario);
         })
         .catch(error => console.error(error));
