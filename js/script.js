@@ -458,4 +458,4 @@ var app = new Vue({
     },
     }
 
-}).$beforeMount()
+})
