@@ -91,7 +91,7 @@ function registrarUsuario(obj){
 
 }
 
-function registrarthis.Admin(obj){
+/*function registrarAdmin(obj){
     $.ajax({
         method: 'POST',
         url: direccion+'/registerthis.Admin.py',
@@ -112,7 +112,7 @@ function registrarthis.Admin(obj){
         }
     }); 
 
-}
+}*/
 
 function registrarDomi(obj){
     $.ajax({
