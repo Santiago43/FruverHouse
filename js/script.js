@@ -486,7 +486,7 @@ var app = new Vue({
             axios.get(direccionFlask+"/permisos")
             .then(response => {
             this.permisos=response.data
-            console.log(permisos);
+            console.log(this.permisos);
         })
         }
     },
