@@ -91,10 +91,10 @@ function registrarUsuario(obj){
 
 }
 
-function registrarAdmin(obj){
+function registrarthis.Admin(obj){
     $.ajax({
         method: 'POST',
-        url: direccion+'/registerAdmin.py',
+        url: direccion+'/registerthis.Admin.py',
         data: obj,
         dataType: "json",
         success: function(rta) {
@@ -436,12 +436,12 @@ var app = new Vue({
     },
     methods: {
         registrarAdmin:function(){
-            if (validarEmail(admin.email)){
-                if(admin.email!==admin.emailc){
+            if (validarEmail(this.admin.email)){
+                if(this.admin.email!==this.admin.emailc){
                     alert("Los correos no coinciden");
                 }
                 else {
-                    if (admin.password!==admin.passwordC){
+                    if (this.admin.password!==this.admin.passwordC){
                         alert("Las contraseñas no coinciden");
                     }else{
                         checkboxes = document.getElementsByClassName("el_permiso");
@@ -452,18 +452,18 @@ var app = new Vue({
                             }
                         }
                         var payload ={
-                            n1:admin.n1,
-                            n2:admin.n2,
-                            a1:admin.a1,
-                            a2:admin.a2,
-                            email:admin.email,
-                            telefono:admin.telefono,
-                            contra:admin.contraseña,
-                            documento:admin.documento,
-                            tipoDocumento:admin.tipoDocumento,
+                            n1:this.admin.n1,
+                            n2:this.admin.n2,
+                            a1:this.admin.a1,
+                            a2:this.admin.a2,
+                            email:this.admin.email,
+                            telefono:this.admin.telefono,
+                            contra:this.admin.contraseña,
+                            documento:this.admin.documento,
+                            tipoDocumento:this.admin.tipoDocumento,
                             permisos:permisosAAsignar
                         }
-                        axios.post(direccionFlask+"/admin",payload)
+                        axios.post(direccionFlask+"/this.admin",payload)
                         .then(response => {
                             const data = response.data;
                             alert(data.mensaje);
@@ -527,7 +527,7 @@ var app = new Vue({
             console.log("Usuario: ",data.usuario);
         })
         .catch(error => console.error(error));
-        if(document.title==="Registro Administrador- Fruver House"){
+        if(document.title==="Registro this.Administrador- Fruver House"){
             axios.get(direccionFlask+"/permisos")
             .then(response => {
             var obj=response.data;
