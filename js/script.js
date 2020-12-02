@@ -463,7 +463,7 @@ var app = new Vue({
                             tipoDocumento:this.admin.tipoDocumento,
                             permisos:permisosAAsignar
                         }
-                        axios.post(direccionFlask+"/this.admin",payload)
+                        axios.post(direccionFlask+"/admin",payload)
                         .then(response => {
                             const data = response.data;
                             alert(data.mensaje);
