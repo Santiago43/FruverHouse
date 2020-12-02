@@ -448,7 +448,7 @@ var app = new Vue({
                         var permisosAAsignar=new Array()
                         for (let i = 0; i < checkboxes.length; i++) {
                             if(checkboxes[i].checked){
-                                this.permisosAAsignar.push(checkboxes[i].id);
+                                permisosAAsignar.push(checkboxes[i].id);
                             }
                         }
                         var payload ={
