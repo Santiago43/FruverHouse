@@ -45,7 +45,7 @@
                     Teléfono: <input v-model="admin.telefono" type="number" name="telefono" id="telefono">
                     Dirección de residencia: <input v-model="admin.direccion" type="text" name="direccion" id="direccion">
                     Permisos: <ul>
-                        <li v-for= "p in permisos">{{p.nombre}} <input type="checkbox" name="" v-bind:id="p.idPermiso"></li>
+                        <li v-for= "p in permisos">{{p.nombrePermiso}} <input type="checkbox" name="" v-bind:id="p.idPermiso"></li>
                     </ul>
                     <input class="ui yellow button " id="btnRegistrarAdmin" type="submit" value="Registrar">
                 </form>
