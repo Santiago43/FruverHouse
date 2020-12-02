@@ -3,7 +3,10 @@ var productos;
 var productosEnCarro;
 var direccion="/cgi-bin/FruverHouseBack";
 var direccionFlask='http://3.91.199.197:5000';
-
+/**
+ * Función que obtiene el valor de una cookie
+ * @param {*} cname 
+ */
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -19,7 +22,12 @@ function getCookie(cname) {
     }
     return "";
 }
-
+/**
+ * Función que establece una cookie
+ * @param {*} cname 
+ * @param {*} cvalue 
+ * @param {*} exdays 
+ */
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -27,9 +35,26 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
+/**
+ * Función que elimina una cookie por el nombre
+ * @param {*} name 
+ */
 function delete_cookie(name) {
     document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
   }
+/**
+ * Función que elimina todas las cookies 
+ */
+function deleteAllCookies() {
+    var cookies = document.cookie.split(";");
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    }
+}
 /**
  * 
  * @param {string} valor 
@@ -412,9 +437,10 @@ var app = new Vue({
     },
     methods: {
        cerrarSesion: function(){
-            delete_cookie("usuario")
+            deleteAllCookies()
             this.logged=false;
             this.usuario={}
+            window.location.assign("index.html")
        },
        carrito:function(){
            window.location.assign("carrito.html")
@@ -433,6 +459,9 @@ var app = new Vue({
             const data = response.data;
             alert(data.mensaje);
             if (data.status==="success"){
+                for (let i = 0; i < productosACompra.length; i++) {
+                    delete_cookie(productosACompra[i].idProducto);
+                }
                 window.location.assign("index.html")
             }
             
