@@ -2,7 +2,7 @@ var totales=new Array();
 var productos;
 var productosEnCarro;
 var direccion="/cgi-bin/FruverHouseBack";
-var direccionFlask='http://54.174.230.240:5000';
+var direccionFlask='http://18.206.125.25/:5000';
 /**
  * Función que obtiene el valor de una cookie
  * @param {*} cname 
