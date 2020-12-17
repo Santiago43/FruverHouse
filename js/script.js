@@ -1,8 +1,8 @@
 var totales=new Array();
 var productos;
 var productosEnCarro;
-var direccion="http://ec2-54-174-230-240.compute-1.amazonaws.com/cgi-bin/FruverHouseBack";
-var direccionFlask='http://ec2-54-174-230-240.compute-1.amazonaws.com';
+var direccion="/cgi-bin/FruverHouseBack";
+var direccionFlask='http://18.206.125.25:5000';
 /**
  * Función que obtiene el valor de una cookie
  * @param {*} cname 
@@ -510,7 +510,6 @@ var app = new Vue({
                 }
                 window.location.assign("index.html")
             }
-            
         })
         .catch(error => console.error(error));
     },
